@@ -8,14 +8,18 @@
 
 import WatchKit
 import Foundation
+import WatchConnectivity
 
 
-class InterfaceController: WKInterfaceController {
+class InterfaceController: WKInterfaceController, WCSessionDelegate {
 
+    let session : WCSession = WCSession.defaultSession()
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        // Configure interface objects here.
+        session.delegate = self;
+        session.activateSession()
     }
 
     override func willActivate() {
@@ -26,6 +30,15 @@ class InterfaceController: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+    }
+    
+    func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
+//        let account : MBAccountTool = MBAccountTool()
+//        account.accountWithDict(message)
+//        MBAccountTool.saveAccount(account)
+        
+        print("test is ")
+        print(message["code"])
     }
 
 }

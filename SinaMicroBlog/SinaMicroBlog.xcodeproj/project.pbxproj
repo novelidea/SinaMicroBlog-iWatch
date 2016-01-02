@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DAC8321A1C31C2F500FE3FFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC832191C31C2F500FE3FFB /* AppDelegate.swift */; };
-		DAC8321C1C31C2F500FE3FFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8321B1C31C2F500FE3FFB /* ViewController.swift */; };
+		DA62DBB11C37269300D0C18E /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA62DBAD1C37269300D0C18E /* ExtensionDelegate.swift */; };
+		DA62DBB71C37286200D0C18E /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA62DBB41C37286200D0C18E /* InterfaceController.swift */; };
+		DA62DBBC1C37A08800D0C18E /* MBAccountParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA62DBBB1C37A08800D0C18E /* MBAccountParameters.swift */; };
+		DA62DBBE1C37A29100D0C18E /* MBAccountTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA62DBBD1C37A29100D0C18E /* MBAccountTool.swift */; };
 		DAC8321F1C31C2F500FE3FFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC8321D1C31C2F500FE3FFB /* Main.storyboard */; };
 		DAC832211C31C2F500FE3FFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC832201C31C2F500FE3FFB /* Assets.xcassets */; };
 		DAC832241C31C2F500FE3FFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC832221C31C2F500FE3FFB /* LaunchScreen.storyboard */; };
@@ -18,9 +20,10 @@
 		DAC832451C31C2F500FE3FFB /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC832431C31C2F500FE3FFB /* Interface.storyboard */; };
 		DAC832471C31C2F500FE3FFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC832461C31C2F500FE3FFB /* Assets.xcassets */; };
 		DAC8324E1C31C2F500FE3FFB /* SinaMicroBlog WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DAC8324D1C31C2F500FE3FFB /* SinaMicroBlog WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		DAC832531C31C2F500FE3FFB /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC832521C31C2F500FE3FFB /* InterfaceController.swift */; };
-		DAC832551C31C2F500FE3FFB /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC832541C31C2F500FE3FFB /* ExtensionDelegate.swift */; };
 		DAC832571C31C2F500FE3FFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC832561C31C2F500FE3FFB /* Assets.xcassets */; };
+		DAC8327B1C31D61A00FE3FFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC832791C31D61A00FE3FFB /* AppDelegate.swift */; };
+		DAC8327C1C31D61A00FE3FFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8327A1C31D61A00FE3FFB /* ViewController.swift */; };
+		DAC832801C31DD9000FE3FFB /* MBOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC8327F1C31DD9000FE3FFB /* MBOAuthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,9 +83,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DA62DBAD1C37269300D0C18E /* ExtensionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		DA62DBB41C37286200D0C18E /* InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		DA62DBBB1C37A08800D0C18E /* MBAccountParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBAccountParameters.swift; sourceTree = "<group>"; };
+		DA62DBBD1C37A29100D0C18E /* MBAccountTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBAccountTool.swift; sourceTree = "<group>"; };
 		DAC832161C31C2F500FE3FFB /* SinaMicroBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinaMicroBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAC832191C31C2F500FE3FFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DAC8321B1C31C2F500FE3FFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DAC8321E1C31C2F500FE3FFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAC832201C31C2F500FE3FFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAC832231C31C2F500FE3FFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,10 +103,11 @@
 		DAC832461C31C2F500FE3FFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAC832481C31C2F500FE3FFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAC8324D1C31C2F500FE3FFB /* SinaMicroBlog WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SinaMicroBlog WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAC832521C31C2F500FE3FFB /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		DAC832541C31C2F500FE3FFB /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		DAC832561C31C2F500FE3FFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAC832581C31C2F500FE3FFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAC832791C31D61A00FE3FFB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DAC8327A1C31D61A00FE3FFB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DAC8327F1C31DD9000FE3FFB /* MBOAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MBOAuthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +142,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA62DBA91C37269300D0C18E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DA62DBB31C37286200D0C18E /* Controller */,
+				DA62DBB51C37286200D0C18E /* Model */,
+				DA62DBB61C37286200D0C18E /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DA62DBAB1C37269300D0C18E /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				DA62DBB81C37A06100D0C18E /* Account */,
+				DA62DBAD1C37269300D0C18E /* ExtensionDelegate.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		DA62DBAE1C37269300D0C18E /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		DA62DBB31C37286200D0C18E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DA62DBB41C37286200D0C18E /* InterfaceController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DA62DBB51C37286200D0C18E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA62DBB61C37286200D0C18E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA62DBB81C37A06100D0C18E /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				DA62DBBB1C37A08800D0C18E /* MBAccountParameters.swift */,
+				DA62DBBD1C37A29100D0C18E /* MBAccountTool.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 		DAC8320D1C31C2F500FE3FFB = {
 			isa = PBXGroup;
 			children = (
@@ -163,8 +226,9 @@
 		DAC832181C31C2F500FE3FFB /* SinaMicroBlog */ = {
 			isa = PBXGroup;
 			children = (
-				DAC832191C31C2F500FE3FFB /* AppDelegate.swift */,
-				DAC8321B1C31C2F500FE3FFB /* ViewController.swift */,
+				DAC832781C31D61A00FE3FFB /* Other */,
+				DAC8326C1C31D5C200FE3FFB /* OAuth */,
+				DAC832701C31D5C200FE3FFB /* Main */,
 				DAC8321D1C31C2F500FE3FFB /* Main.storyboard */,
 				DAC832201C31C2F500FE3FFB /* Assets.xcassets */,
 				DAC832221C31C2F500FE3FFB /* LaunchScreen.storyboard */,
@@ -204,12 +268,85 @@
 		DAC832511C31C2F500FE3FFB /* SinaMicroBlog WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				DAC832521C31C2F500FE3FFB /* InterfaceController.swift */,
-				DAC832541C31C2F500FE3FFB /* ExtensionDelegate.swift */,
+				DA62DBA91C37269300D0C18E /* Main */,
+				DA62DBAB1C37269300D0C18E /* Others */,
+				DA62DBAE1C37269300D0C18E /* Tool */,
 				DAC832561C31C2F500FE3FFB /* Assets.xcassets */,
 				DAC832581C31C2F500FE3FFB /* Info.plist */,
 			);
 			path = "SinaMicroBlog WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		DAC8326C1C31D5C200FE3FFB /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				DAC8326D1C31D5C200FE3FFB /* Controller */,
+				DAC8326E1C31D5C200FE3FFB /* Model */,
+				DAC8326F1C31D5C200FE3FFB /* View */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		DAC8326D1C31D5C200FE3FFB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DAC8327F1C31DD9000FE3FFB /* MBOAuthViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DAC8326E1C31D5C200FE3FFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DAC8326F1C31D5C200FE3FFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAC832701C31D5C200FE3FFB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DAC832721C31D5C200FE3FFB /* Controller */,
+				DAC832731C31D5C200FE3FFB /* Model */,
+				DAC832741C31D5C200FE3FFB /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DAC832721C31D5C200FE3FFB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DAC832731C31D5C200FE3FFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DAC832741C31D5C200FE3FFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAC832781C31D61A00FE3FFB /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				DAC832791C31D61A00FE3FFB /* AppDelegate.swift */,
+				DAC8327A1C31D61A00FE3FFB /* ViewController.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +447,7 @@
 		DAC8320E1C31C2F500FE3FFB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MB;
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Pengfei Xing";
@@ -409,8 +547,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAC8321C1C31C2F500FE3FFB /* ViewController.swift in Sources */,
-				DAC8321A1C31C2F500FE3FFB /* AppDelegate.swift in Sources */,
+				DAC8327B1C31D61A00FE3FFB /* AppDelegate.swift in Sources */,
+				DAC832801C31DD9000FE3FFB /* MBOAuthViewController.swift in Sources */,
+				DAC8327C1C31D61A00FE3FFB /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,8 +573,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAC832551C31C2F500FE3FFB /* ExtensionDelegate.swift in Sources */,
-				DAC832531C31C2F500FE3FFB /* InterfaceController.swift in Sources */,
+				DA62DBBC1C37A08800D0C18E /* MBAccountParameters.swift in Sources */,
+				DA62DBBE1C37A29100D0C18E /* MBAccountTool.swift in Sources */,
+				DA62DBB11C37269300D0C18E /* ExtensionDelegate.swift in Sources */,
+				DA62DBB71C37286200D0C18E /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,6 +863,7 @@
 				DAC8325D1C31C2F500FE3FFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAC8325F1C31C2F500FE3FFB /* Build configuration list for PBXNativeTarget "SinaMicroBlog WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -730,6 +872,7 @@
 				DAC832611C31C2F500FE3FFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAC832631C31C2F500FE3FFB /* Build configuration list for PBXNativeTarget "SinaMicroBlog" */ = {
 			isa = XCConfigurationList;
@@ -738,6 +881,7 @@
 				DAC832651C31C2F500FE3FFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAC832661C31C2F500FE3FFB /* Build configuration list for PBXNativeTarget "SinaMicroBlogTests" */ = {
 			isa = XCConfigurationList;
@@ -746,6 +890,7 @@
 				DAC832681C31C2F500FE3FFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAC832691C31C2F500FE3FFB /* Build configuration list for PBXNativeTarget "SinaMicroBlogUITests" */ = {
 			isa = XCConfigurationList;
@@ -754,6 +899,7 @@
 				DAC8326B1C31C2F500FE3FFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

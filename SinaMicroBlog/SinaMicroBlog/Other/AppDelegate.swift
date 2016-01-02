@@ -15,7 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let oauthVC : MBOAuthViewController = MBOAuthViewController.init();
+        self.window?.rootViewController = oauthVC
+        
+        self.window?.makeKeyAndVisible()
         return true
     }
 
