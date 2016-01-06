@@ -1,0 +1,1144 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA372D491C3D883D00494B96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA372D471C3D883D00494B96 /* Main.storyboard */; };
+		DA372D4B1C3D883D00494B96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA372D4A1C3D883D00494B96 /* Assets.xcassets */; };
+		DA372D4E1C3D883D00494B96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA372D4C1C3D883D00494B96 /* LaunchScreen.storyboard */; };
+		DA372D591C3D883D00494B96 /* SinaMicroBlog_iWatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372D581C3D883D00494B96 /* SinaMicroBlog_iWatchTests.m */; };
+		DA372D641C3D883D00494B96 /* SinaMicroBlog_iWatchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372D631C3D883D00494B96 /* SinaMicroBlog_iWatchUITests.m */; };
+		DA372D691C3D883D00494B96 /* SinaMicroBlog-iWatch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = DA372D681C3D883D00494B96 /* SinaMicroBlog-iWatch WatchKit App.app */; };
+		DA372D6F1C3D883D00494B96 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA372D6D1C3D883D00494B96 /* Interface.storyboard */; };
+		DA372D711C3D883D00494B96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA372D701C3D883D00494B96 /* Assets.xcassets */; };
+		DA372D781C3D883E00494B96 /* SinaMicroBlog-iWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DA372D771C3D883E00494B96 /* SinaMicroBlog-iWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DA372D831C3D883E00494B96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA372D821C3D883E00494B96 /* Assets.xcassets */; };
+		DA372DB21C3D8AD200494B96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372DA91C3D8AD200494B96 /* AppDelegate.m */; };
+		DA372DB31C3D8AD200494B96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372DAC1C3D8AD200494B96 /* main.m */; };
+		DA372DB61C3D8C0200494B96 /* MBOAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372DB51C3D8C0200494B96 /* MBOAuthController.m */; };
+		DA372DBD1C3D8D5700494B96 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372DB91C3D8D5700494B96 /* MBProgressHUD+MJ.m */; };
+		DA372DBE1C3D8D5700494B96 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DA372DBA1C3D8D5700494B96 /* MBProgressHUD.bundle */; };
+		DA372DBF1C3D8D5700494B96 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372DBC1C3D8D5700494B96 /* MBProgressHUD.m */; };
+		DA372DE81C3D8E8700494B96 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372DD61C3D8E8700494B96 /* AFHTTPRequestOperation.m */; };
+		DA372DE91C3D8E8700494B96 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372DD81C3D8E8700494B96 /* AFHTTPRequestOperationManager.m */; };
+		DA372DEA1C3D8E8700494B96 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372DDA1C3D8E8700494B96 /* AFHTTPSessionManager.m */; };
+		DA372DEB1C3D8E8700494B96 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372DDD1C3D8E8700494B96 /* AFNetworkReachabilityManager.m */; };
+		DA372DEC1C3D8E8700494B96 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372DDF1C3D8E8700494B96 /* AFSecurityPolicy.m */; };
+		DA372DED1C3D8E8700494B96 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372DE11C3D8E8700494B96 /* AFURLConnectionOperation.m */; };
+		DA372DEE1C3D8E8700494B96 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372DE31C3D8E8700494B96 /* AFURLRequestSerialization.m */; };
+		DA372DEF1C3D8E8700494B96 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372DE51C3D8E8700494B96 /* AFURLResponseSerialization.m */; };
+		DA372DF01C3D8E8700494B96 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372DE71C3D8E8700494B96 /* AFURLSessionManager.m */; };
+		DA372DF31C3D8EEC00494B96 /* MBAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372DF21C3D8EEC00494B96 /* MBAccount.m */; };
+		DA372DF71C3D8FA500494B96 /* MBAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372DF61C3D8FA500494B96 /* MBAccountTool.m */; };
+		DA372DFB1C3D933400494B96 /* MBRootTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372DFA1C3D933400494B96 /* MBRootTool.m */; };
+		DA372DFE1C3D939F00494B96 /* MBMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372DFD1C3D939F00494B96 /* MBMainViewController.m */; };
+		DA372E0E1C3DA01900494B96 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372E071C3DA01900494B96 /* InterfaceController.m */; };
+		DA372E0F1C3DA01900494B96 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372E0C1C3DA01900494B96 /* ExtensionDelegate.m */; };
+		DA372E121C3DA98000494B96 /* MBAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372E111C3DA98000494B96 /* MBAccount.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA372D551C3D883D00494B96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA372D331C3D883D00494B96 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA372D3A1C3D883D00494B96;
+			remoteInfo = "SinaMicroBlog-iWatch";
+		};
+		DA372D601C3D883D00494B96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA372D331C3D883D00494B96 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA372D3A1C3D883D00494B96;
+			remoteInfo = "SinaMicroBlog-iWatch";
+		};
+		DA372D6A1C3D883D00494B96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA372D331C3D883D00494B96 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA372D671C3D883D00494B96;
+			remoteInfo = "SinaMicroBlog-iWatch WatchKit App";
+		};
+		DA372D791C3D883E00494B96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA372D331C3D883D00494B96 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA372D761C3D883E00494B96;
+			remoteInfo = "SinaMicroBlog-iWatch WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DA372D8A1C3D883E00494B96 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DA372D781C3D883E00494B96 /* SinaMicroBlog-iWatch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA372D8E1C3D883E00494B96 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				DA372D691C3D883D00494B96 /* SinaMicroBlog-iWatch WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DA372D3B1C3D883D00494B96 /* SinaMicroBlog-iWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SinaMicroBlog-iWatch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA372D481C3D883D00494B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DA372D4A1C3D883D00494B96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DA372D4D1C3D883D00494B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DA372D4F1C3D883D00494B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA372D541C3D883D00494B96 /* SinaMicroBlog-iWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SinaMicroBlog-iWatchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA372D581C3D883D00494B96 /* SinaMicroBlog_iWatchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SinaMicroBlog_iWatchTests.m; sourceTree = "<group>"; };
+		DA372D5A1C3D883D00494B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA372D5F1C3D883D00494B96 /* SinaMicroBlog-iWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SinaMicroBlog-iWatchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA372D631C3D883D00494B96 /* SinaMicroBlog_iWatchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SinaMicroBlog_iWatchUITests.m; sourceTree = "<group>"; };
+		DA372D651C3D883D00494B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA372D681C3D883D00494B96 /* SinaMicroBlog-iWatch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SinaMicroBlog-iWatch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA372D6E1C3D883D00494B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		DA372D701C3D883D00494B96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DA372D721C3D883D00494B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA372D771C3D883E00494B96 /* SinaMicroBlog-iWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SinaMicroBlog-iWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA372D821C3D883E00494B96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DA372D841C3D883E00494B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA372DA81C3D8AD200494B96 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DA372DA91C3D8AD200494B96 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DA372DAC1C3D8AD200494B96 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DA372DB41C3D8C0200494B96 /* MBOAuthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBOAuthController.h; sourceTree = "<group>"; };
+		DA372DB51C3D8C0200494B96 /* MBOAuthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBOAuthController.m; sourceTree = "<group>"; };
+		DA372DB81C3D8D5700494B96 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		DA372DB91C3D8D5700494B96 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		DA372DBA1C3D8D5700494B96 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		DA372DBB1C3D8D5700494B96 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		DA372DBC1C3D8D5700494B96 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		DA372DD51C3D8E8700494B96 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		DA372DD61C3D8E8700494B96 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		DA372DD71C3D8E8700494B96 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		DA372DD81C3D8E8700494B96 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		DA372DD91C3D8E8700494B96 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		DA372DDA1C3D8E8700494B96 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		DA372DDB1C3D8E8700494B96 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		DA372DDC1C3D8E8700494B96 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		DA372DDD1C3D8E8700494B96 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		DA372DDE1C3D8E8700494B96 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		DA372DDF1C3D8E8700494B96 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		DA372DE01C3D8E8700494B96 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		DA372DE11C3D8E8700494B96 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		DA372DE21C3D8E8700494B96 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		DA372DE31C3D8E8700494B96 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		DA372DE41C3D8E8700494B96 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		DA372DE51C3D8E8700494B96 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		DA372DE61C3D8E8700494B96 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		DA372DE71C3D8E8700494B96 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		DA372DF11C3D8EEC00494B96 /* MBAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAccount.h; sourceTree = "<group>"; };
+		DA372DF21C3D8EEC00494B96 /* MBAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAccount.m; sourceTree = "<group>"; };
+		DA372DF51C3D8FA500494B96 /* MBAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAccountTool.h; sourceTree = "<group>"; };
+		DA372DF61C3D8FA500494B96 /* MBAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAccountTool.m; sourceTree = "<group>"; };
+		DA372DF91C3D933400494B96 /* MBRootTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRootTool.h; sourceTree = "<group>"; };
+		DA372DFA1C3D933400494B96 /* MBRootTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRootTool.m; sourceTree = "<group>"; };
+		DA372DFC1C3D939F00494B96 /* MBMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMainViewController.h; sourceTree = "<group>"; };
+		DA372DFD1C3D939F00494B96 /* MBMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMainViewController.m; sourceTree = "<group>"; };
+		DA372E061C3DA01900494B96 /* InterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		DA372E071C3DA01900494B96 /* InterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		DA372E0B1C3DA01900494B96 /* ExtensionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		DA372E0C1C3DA01900494B96 /* ExtensionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		DA372E101C3DA98000494B96 /* MBAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAccount.h; sourceTree = "<group>"; };
+		DA372E111C3DA98000494B96 /* MBAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAccount.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA372D381C3D883D00494B96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA372D511C3D883D00494B96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA372D5C1C3D883D00494B96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA372D741C3D883E00494B96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA372D321C3D883D00494B96 = {
+			isa = PBXGroup;
+			children = (
+				DA372D3D1C3D883D00494B96 /* SinaMicroBlog-iWatch */,
+				DA372D571C3D883D00494B96 /* SinaMicroBlog-iWatchTests */,
+				DA372D621C3D883D00494B96 /* SinaMicroBlog-iWatchUITests */,
+				DA372D6C1C3D883D00494B96 /* SinaMicroBlog-iWatch WatchKit App */,
+				DA372D7B1C3D883E00494B96 /* SinaMicroBlog-iWatch WatchKit Extension */,
+				DA372D3C1C3D883D00494B96 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA372D3C1C3D883D00494B96 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA372D3B1C3D883D00494B96 /* SinaMicroBlog-iWatch.app */,
+				DA372D541C3D883D00494B96 /* SinaMicroBlog-iWatchTests.xctest */,
+				DA372D5F1C3D883D00494B96 /* SinaMicroBlog-iWatchUITests.xctest */,
+				DA372D681C3D883D00494B96 /* SinaMicroBlog-iWatch WatchKit App.app */,
+				DA372D771C3D883E00494B96 /* SinaMicroBlog-iWatch WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA372D3D1C3D883D00494B96 /* SinaMicroBlog-iWatch */ = {
+			isa = PBXGroup;
+			children = (
+				DA372D981C3D8AD200494B96 /* Classes */,
+				DA372D471C3D883D00494B96 /* Main.storyboard */,
+				DA372D4A1C3D883D00494B96 /* Assets.xcassets */,
+				DA372D4C1C3D883D00494B96 /* LaunchScreen.storyboard */,
+				DA372D3E1C3D883D00494B96 /* Supporting Files */,
+			);
+			path = "SinaMicroBlog-iWatch";
+			sourceTree = "<group>";
+		};
+		DA372D3E1C3D883D00494B96 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA372D4F1C3D883D00494B96 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA372D571C3D883D00494B96 /* SinaMicroBlog-iWatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA372D581C3D883D00494B96 /* SinaMicroBlog_iWatchTests.m */,
+				DA372D5A1C3D883D00494B96 /* Info.plist */,
+			);
+			path = "SinaMicroBlog-iWatchTests";
+			sourceTree = "<group>";
+		};
+		DA372D621C3D883D00494B96 /* SinaMicroBlog-iWatchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DA372D631C3D883D00494B96 /* SinaMicroBlog_iWatchUITests.m */,
+				DA372D651C3D883D00494B96 /* Info.plist */,
+			);
+			path = "SinaMicroBlog-iWatchUITests";
+			sourceTree = "<group>";
+		};
+		DA372D6C1C3D883D00494B96 /* SinaMicroBlog-iWatch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				DA372D6D1C3D883D00494B96 /* Interface.storyboard */,
+				DA372D701C3D883D00494B96 /* Assets.xcassets */,
+				DA372D721C3D883D00494B96 /* Info.plist */,
+			);
+			path = "SinaMicroBlog-iWatch WatchKit App";
+			sourceTree = "<group>";
+		};
+		DA372D7B1C3D883E00494B96 /* SinaMicroBlog-iWatch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DA372DFF1C3DA01900494B96 /* Classes */,
+				DA372D821C3D883E00494B96 /* Assets.xcassets */,
+				DA372D841C3D883E00494B96 /* Info.plist */,
+			);
+			path = "SinaMicroBlog-iWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		DA372D981C3D8AD200494B96 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DA372D991C3D8AD200494B96 /* Main */,
+				DA372D9F1C3D8AD200494B96 /* NewFeature */,
+				DA372DA31C3D8AD200494B96 /* OAuth */,
+				DA372DA71C3D8AD200494B96 /* Other */,
+				DA372DAD1C3D8AD200494B96 /* Tool */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		DA372D991C3D8AD200494B96 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DA372D9A1C3D8AD200494B96 /* Controller */,
+				DA372D9D1C3D8AD200494B96 /* Model */,
+				DA372D9E1C3D8AD200494B96 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DA372D9A1C3D8AD200494B96 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DA372DFC1C3D939F00494B96 /* MBMainViewController.h */,
+				DA372DFD1C3D939F00494B96 /* MBMainViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DA372D9D1C3D8AD200494B96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA372D9E1C3D8AD200494B96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA372D9F1C3D8AD200494B96 /* NewFeature */ = {
+			isa = PBXGroup;
+			children = (
+				DA372DA01C3D8AD200494B96 /* Controller */,
+				DA372DA11C3D8AD200494B96 /* Model */,
+				DA372DA21C3D8AD200494B96 /* View */,
+			);
+			path = NewFeature;
+			sourceTree = "<group>";
+		};
+		DA372DA01C3D8AD200494B96 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DA372DA11C3D8AD200494B96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA372DA21C3D8AD200494B96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA372DA31C3D8AD200494B96 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				DA372DA41C3D8AD200494B96 /* Controller */,
+				DA372DA51C3D8AD200494B96 /* Model */,
+				DA372DA61C3D8AD200494B96 /* View */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		DA372DA41C3D8AD200494B96 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DA372DB41C3D8C0200494B96 /* MBOAuthController.h */,
+				DA372DB51C3D8C0200494B96 /* MBOAuthController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DA372DA51C3D8AD200494B96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA372DF11C3D8EEC00494B96 /* MBAccount.h */,
+				DA372DF21C3D8EEC00494B96 /* MBAccount.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA372DA61C3D8AD200494B96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA372DA71C3D8AD200494B96 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				DA372DA81C3D8AD200494B96 /* AppDelegate.h */,
+				DA372DA91C3D8AD200494B96 /* AppDelegate.m */,
+				DA372DAA1C3D8AD200494B96 /* Category */,
+				DA372DAB1C3D8AD200494B96 /* Lib */,
+				DA372DAC1C3D8AD200494B96 /* main.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		DA372DAA1C3D8AD200494B96 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		DA372DAB1C3D8AD200494B96 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				DA372DD41C3D8E8700494B96 /* AFNetworking */,
+				DA372DB71C3D8D5700494B96 /* MBProgressHUD */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		DA372DAD1C3D8AD200494B96 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				DA372DF81C3D931E00494B96 /* Root */,
+				DA372DF41C3D8F9400494B96 /* Account */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		DA372DB71C3D8D5700494B96 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				DA372DB81C3D8D5700494B96 /* MBProgressHUD+MJ.h */,
+				DA372DB91C3D8D5700494B96 /* MBProgressHUD+MJ.m */,
+				DA372DBA1C3D8D5700494B96 /* MBProgressHUD.bundle */,
+				DA372DBB1C3D8D5700494B96 /* MBProgressHUD.h */,
+				DA372DBC1C3D8D5700494B96 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		DA372DD41C3D8E8700494B96 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				DA372DD51C3D8E8700494B96 /* AFHTTPRequestOperation.h */,
+				DA372DD61C3D8E8700494B96 /* AFHTTPRequestOperation.m */,
+				DA372DD71C3D8E8700494B96 /* AFHTTPRequestOperationManager.h */,
+				DA372DD81C3D8E8700494B96 /* AFHTTPRequestOperationManager.m */,
+				DA372DD91C3D8E8700494B96 /* AFHTTPSessionManager.h */,
+				DA372DDA1C3D8E8700494B96 /* AFHTTPSessionManager.m */,
+				DA372DDB1C3D8E8700494B96 /* AFNetworking.h */,
+				DA372DDC1C3D8E8700494B96 /* AFNetworkReachabilityManager.h */,
+				DA372DDD1C3D8E8700494B96 /* AFNetworkReachabilityManager.m */,
+				DA372DDE1C3D8E8700494B96 /* AFSecurityPolicy.h */,
+				DA372DDF1C3D8E8700494B96 /* AFSecurityPolicy.m */,
+				DA372DE01C3D8E8700494B96 /* AFURLConnectionOperation.h */,
+				DA372DE11C3D8E8700494B96 /* AFURLConnectionOperation.m */,
+				DA372DE21C3D8E8700494B96 /* AFURLRequestSerialization.h */,
+				DA372DE31C3D8E8700494B96 /* AFURLRequestSerialization.m */,
+				DA372DE41C3D8E8700494B96 /* AFURLResponseSerialization.h */,
+				DA372DE51C3D8E8700494B96 /* AFURLResponseSerialization.m */,
+				DA372DE61C3D8E8700494B96 /* AFURLSessionManager.h */,
+				DA372DE71C3D8E8700494B96 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		DA372DF41C3D8F9400494B96 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				DA372DF51C3D8FA500494B96 /* MBAccountTool.h */,
+				DA372DF61C3D8FA500494B96 /* MBAccountTool.m */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		DA372DF81C3D931E00494B96 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				DA372DF91C3D933400494B96 /* MBRootTool.h */,
+				DA372DFA1C3D933400494B96 /* MBRootTool.m */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		DA372DFF1C3DA01900494B96 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DA372E001C3DA01900494B96 /* Detail */,
+				DA372E041C3DA01900494B96 /* Main */,
+				DA372E0A1C3DA01900494B96 /* Other */,
+				DA372E0D1C3DA01900494B96 /* Tool */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		DA372E001C3DA01900494B96 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				DA372E011C3DA01900494B96 /* Controller */,
+				DA372E021C3DA01900494B96 /* Model */,
+				DA372E031C3DA01900494B96 /* View */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		DA372E011C3DA01900494B96 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DA372E021C3DA01900494B96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA372E031C3DA01900494B96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA372E041C3DA01900494B96 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DA372E051C3DA01900494B96 /* Controller */,
+				DA372E081C3DA01900494B96 /* Model */,
+				DA372E091C3DA01900494B96 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DA372E051C3DA01900494B96 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DA372E061C3DA01900494B96 /* InterfaceController.h */,
+				DA372E071C3DA01900494B96 /* InterfaceController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DA372E081C3DA01900494B96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA372E101C3DA98000494B96 /* MBAccount.h */,
+				DA372E111C3DA98000494B96 /* MBAccount.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA372E091C3DA01900494B96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA372E0A1C3DA01900494B96 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				DA372E311C3DAE7800494B96 /* Lib */,
+				DA372E0B1C3DA01900494B96 /* ExtensionDelegate.h */,
+				DA372E0C1C3DA01900494B96 /* ExtensionDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		DA372E0D1C3DA01900494B96 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		DA372E311C3DAE7800494B96 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA372D3A1C3D883D00494B96 /* SinaMicroBlog-iWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA372D8F1C3D883E00494B96 /* Build configuration list for PBXNativeTarget "SinaMicroBlog-iWatch" */;
+			buildPhases = (
+				DA372D371C3D883D00494B96 /* Sources */,
+				DA372D381C3D883D00494B96 /* Frameworks */,
+				DA372D391C3D883D00494B96 /* Resources */,
+				DA372D8E1C3D883E00494B96 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA372D6B1C3D883D00494B96 /* PBXTargetDependency */,
+			);
+			name = "SinaMicroBlog-iWatch";
+			productName = "SinaMicroBlog-iWatch";
+			productReference = DA372D3B1C3D883D00494B96 /* SinaMicroBlog-iWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DA372D531C3D883D00494B96 /* SinaMicroBlog-iWatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA372D921C3D883E00494B96 /* Build configuration list for PBXNativeTarget "SinaMicroBlog-iWatchTests" */;
+			buildPhases = (
+				DA372D501C3D883D00494B96 /* Sources */,
+				DA372D511C3D883D00494B96 /* Frameworks */,
+				DA372D521C3D883D00494B96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA372D561C3D883D00494B96 /* PBXTargetDependency */,
+			);
+			name = "SinaMicroBlog-iWatchTests";
+			productName = "SinaMicroBlog-iWatchTests";
+			productReference = DA372D541C3D883D00494B96 /* SinaMicroBlog-iWatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DA372D5E1C3D883D00494B96 /* SinaMicroBlog-iWatchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA372D951C3D883E00494B96 /* Build configuration list for PBXNativeTarget "SinaMicroBlog-iWatchUITests" */;
+			buildPhases = (
+				DA372D5B1C3D883D00494B96 /* Sources */,
+				DA372D5C1C3D883D00494B96 /* Frameworks */,
+				DA372D5D1C3D883D00494B96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA372D611C3D883D00494B96 /* PBXTargetDependency */,
+			);
+			name = "SinaMicroBlog-iWatchUITests";
+			productName = "SinaMicroBlog-iWatchUITests";
+			productReference = DA372D5F1C3D883D00494B96 /* SinaMicroBlog-iWatchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		DA372D671C3D883D00494B96 /* SinaMicroBlog-iWatch WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA372D8B1C3D883E00494B96 /* Build configuration list for PBXNativeTarget "SinaMicroBlog-iWatch WatchKit App" */;
+			buildPhases = (
+				DA372D661C3D883D00494B96 /* Resources */,
+				DA372D8A1C3D883E00494B96 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA372D7A1C3D883E00494B96 /* PBXTargetDependency */,
+			);
+			name = "SinaMicroBlog-iWatch WatchKit App";
+			productName = "SinaMicroBlog-iWatch WatchKit App";
+			productReference = DA372D681C3D883D00494B96 /* SinaMicroBlog-iWatch WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		DA372D761C3D883E00494B96 /* SinaMicroBlog-iWatch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA372D871C3D883E00494B96 /* Build configuration list for PBXNativeTarget "SinaMicroBlog-iWatch WatchKit Extension" */;
+			buildPhases = (
+				DA372D731C3D883E00494B96 /* Sources */,
+				DA372D741C3D883E00494B96 /* Frameworks */,
+				DA372D751C3D883E00494B96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SinaMicroBlog-iWatch WatchKit Extension";
+			productName = "SinaMicroBlog-iWatch WatchKit Extension";
+			productReference = DA372D771C3D883E00494B96 /* SinaMicroBlog-iWatch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA372D331C3D883D00494B96 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MB;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Pengfei Xing";
+				TargetAttributes = {
+					DA372D3A1C3D883D00494B96 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = YGY2WW4NV7;
+					};
+					DA372D531C3D883D00494B96 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = YGY2WW4NV7;
+						TestTargetID = DA372D3A1C3D883D00494B96;
+					};
+					DA372D5E1C3D883D00494B96 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = YGY2WW4NV7;
+						TestTargetID = DA372D3A1C3D883D00494B96;
+					};
+					DA372D671C3D883D00494B96 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = YGY2WW4NV7;
+					};
+					DA372D761C3D883E00494B96 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = YGY2WW4NV7;
+					};
+				};
+			};
+			buildConfigurationList = DA372D361C3D883D00494B96 /* Build configuration list for PBXProject "SinaMicroBlog-iWatch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA372D321C3D883D00494B96;
+			productRefGroup = DA372D3C1C3D883D00494B96 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA372D3A1C3D883D00494B96 /* SinaMicroBlog-iWatch */,
+				DA372D531C3D883D00494B96 /* SinaMicroBlog-iWatchTests */,
+				DA372D5E1C3D883D00494B96 /* SinaMicroBlog-iWatchUITests */,
+				DA372D671C3D883D00494B96 /* SinaMicroBlog-iWatch WatchKit App */,
+				DA372D761C3D883E00494B96 /* SinaMicroBlog-iWatch WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA372D391C3D883D00494B96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA372D4E1C3D883D00494B96 /* LaunchScreen.storyboard in Resources */,
+				DA372DBE1C3D8D5700494B96 /* MBProgressHUD.bundle in Resources */,
+				DA372D4B1C3D883D00494B96 /* Assets.xcassets in Resources */,
+				DA372D491C3D883D00494B96 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA372D521C3D883D00494B96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA372D5D1C3D883D00494B96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA372D661C3D883D00494B96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA372D711C3D883D00494B96 /* Assets.xcassets in Resources */,
+				DA372D6F1C3D883D00494B96 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA372D751C3D883E00494B96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA372D831C3D883E00494B96 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA372D371C3D883D00494B96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA372DF01C3D8E8700494B96 /* AFURLSessionManager.m in Sources */,
+				DA372DB21C3D8AD200494B96 /* AppDelegate.m in Sources */,
+				DA372DF71C3D8FA500494B96 /* MBAccountTool.m in Sources */,
+				DA372DF31C3D8EEC00494B96 /* MBAccount.m in Sources */,
+				DA372DBF1C3D8D5700494B96 /* MBProgressHUD.m in Sources */,
+				DA372DEB1C3D8E8700494B96 /* AFNetworkReachabilityManager.m in Sources */,
+				DA372DBD1C3D8D5700494B96 /* MBProgressHUD+MJ.m in Sources */,
+				DA372DED1C3D8E8700494B96 /* AFURLConnectionOperation.m in Sources */,
+				DA372DEA1C3D8E8700494B96 /* AFHTTPSessionManager.m in Sources */,
+				DA372DEE1C3D8E8700494B96 /* AFURLRequestSerialization.m in Sources */,
+				DA372DFB1C3D933400494B96 /* MBRootTool.m in Sources */,
+				DA372DB31C3D8AD200494B96 /* main.m in Sources */,
+				DA372DB61C3D8C0200494B96 /* MBOAuthController.m in Sources */,
+				DA372DE91C3D8E8700494B96 /* AFHTTPRequestOperationManager.m in Sources */,
+				DA372DFE1C3D939F00494B96 /* MBMainViewController.m in Sources */,
+				DA372DEC1C3D8E8700494B96 /* AFSecurityPolicy.m in Sources */,
+				DA372DEF1C3D8E8700494B96 /* AFURLResponseSerialization.m in Sources */,
+				DA372DE81C3D8E8700494B96 /* AFHTTPRequestOperation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA372D501C3D883D00494B96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA372D591C3D883D00494B96 /* SinaMicroBlog_iWatchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA372D5B1C3D883D00494B96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA372D641C3D883D00494B96 /* SinaMicroBlog_iWatchUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA372D731C3D883E00494B96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA372E0E1C3DA01900494B96 /* InterfaceController.m in Sources */,
+				DA372E121C3DA98000494B96 /* MBAccount.m in Sources */,
+				DA372E0F1C3DA01900494B96 /* ExtensionDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA372D561C3D883D00494B96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA372D3A1C3D883D00494B96 /* SinaMicroBlog-iWatch */;
+			targetProxy = DA372D551C3D883D00494B96 /* PBXContainerItemProxy */;
+		};
+		DA372D611C3D883D00494B96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA372D3A1C3D883D00494B96 /* SinaMicroBlog-iWatch */;
+			targetProxy = DA372D601C3D883D00494B96 /* PBXContainerItemProxy */;
+		};
+		DA372D6B1C3D883D00494B96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA372D671C3D883D00494B96 /* SinaMicroBlog-iWatch WatchKit App */;
+			targetProxy = DA372D6A1C3D883D00494B96 /* PBXContainerItemProxy */;
+		};
+		DA372D7A1C3D883E00494B96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA372D761C3D883E00494B96 /* SinaMicroBlog-iWatch WatchKit Extension */;
+			targetProxy = DA372D791C3D883E00494B96 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA372D471C3D883D00494B96 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA372D481C3D883D00494B96 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DA372D4C1C3D883D00494B96 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA372D4D1C3D883D00494B96 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DA372D6D1C3D883D00494B96 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA372D6E1C3D883D00494B96 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA372D851C3D883E00494B96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DA372D861C3D883E00494B96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA372D881C3D883E00494B96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "SinaMicroBlog-iWatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pengfeixing.SinaMicroBlog-iWatch.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		DA372D891C3D883E00494B96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "SinaMicroBlog-iWatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pengfeixing.SinaMicroBlog-iWatch.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		DA372D8C1C3D883E00494B96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = SinaMicroBlog_iWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "SinaMicroBlog-iWatch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pengfeixing.SinaMicroBlog-iWatch.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		DA372D8D1C3D883E00494B96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = SinaMicroBlog_iWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "SinaMicroBlog-iWatch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pengfeixing.SinaMicroBlog-iWatch.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		DA372D901C3D883E00494B96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "SinaMicroBlog-iWatch/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pengfeixing.SinaMicroBlog-iWatch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DA372D911C3D883E00494B96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "SinaMicroBlog-iWatch/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pengfeixing.SinaMicroBlog-iWatch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DA372D931C3D883E00494B96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "SinaMicroBlog-iWatchTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pengfeixing.SinaMicroBlog-iWatchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SinaMicroBlog-iWatch.app/SinaMicroBlog-iWatch";
+			};
+			name = Debug;
+		};
+		DA372D941C3D883E00494B96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "SinaMicroBlog-iWatchTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pengfeixing.SinaMicroBlog-iWatchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SinaMicroBlog-iWatch.app/SinaMicroBlog-iWatch";
+			};
+			name = Release;
+		};
+		DA372D961C3D883E00494B96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "SinaMicroBlog-iWatchUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pengfeixing.SinaMicroBlog-iWatchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "SinaMicroBlog-iWatch";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		DA372D971C3D883E00494B96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "SinaMicroBlog-iWatchUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pengfeixing.SinaMicroBlog-iWatchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "SinaMicroBlog-iWatch";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA372D361C3D883D00494B96 /* Build configuration list for PBXProject "SinaMicroBlog-iWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA372D851C3D883E00494B96 /* Debug */,
+				DA372D861C3D883E00494B96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA372D871C3D883E00494B96 /* Build configuration list for PBXNativeTarget "SinaMicroBlog-iWatch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA372D881C3D883E00494B96 /* Debug */,
+				DA372D891C3D883E00494B96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DA372D8B1C3D883E00494B96 /* Build configuration list for PBXNativeTarget "SinaMicroBlog-iWatch WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA372D8C1C3D883E00494B96 /* Debug */,
+				DA372D8D1C3D883E00494B96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DA372D8F1C3D883E00494B96 /* Build configuration list for PBXNativeTarget "SinaMicroBlog-iWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA372D901C3D883E00494B96 /* Debug */,
+				DA372D911C3D883E00494B96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DA372D921C3D883E00494B96 /* Build configuration list for PBXNativeTarget "SinaMicroBlog-iWatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA372D931C3D883E00494B96 /* Debug */,
+				DA372D941C3D883E00494B96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DA372D951C3D883E00494B96 /* Build configuration list for PBXNativeTarget "SinaMicroBlog-iWatchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA372D961C3D883E00494B96 /* Debug */,
+				DA372D971C3D883E00494B96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA372D331C3D883D00494B96 /* Project object */;
+}
