@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 
+#import "MBOAuthController.h"
+#import "MBAccountTool.h"
+#import "MBMainViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,7 +20,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    if (0 && [MBAccountTool account]) {
+        MBMainViewController *mainVC = [[MBMainViewController alloc] init];
+        self.window.rootViewController = mainVC;
+    }else{
+        MBOAuthController *oauthVC = [[MBOAuthController alloc] init];
+        self.window.rootViewController = oauthVC;
+        
+    }
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

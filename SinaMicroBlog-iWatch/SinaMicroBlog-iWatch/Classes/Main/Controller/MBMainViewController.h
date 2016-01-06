@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MBMainViewController.h
 //  SinaMicroBlog-iWatch
 //
 //  Created by XingPengfei on 1/6/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MBMainViewController : UIViewController
 
 @end
-
