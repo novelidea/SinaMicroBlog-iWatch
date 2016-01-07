@@ -1,15 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="13E28" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider=""/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <button width="1" alignment="left" title="Refresh" id="hji-Bv-05v">
+                            <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="refresh" destination="AgC-eL-Hgc" id="xaY-uF-54O"/>
+                            </connections>
+                        </button>
+                        <table alignment="left" id="EXm-bW-tCq">
+                            <items>
+                                <tableRow identifier="MainRow" id="II9-Ww-dBy" customClass="MBMainRowView">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="p9T-qy-OxT">
+                                        <items>
+                                            <group width="1" alignment="left" id="xvD-rZ-ODY">
+                                                <items>
+                                                    <imageView width="0.28000000000000003" height="0.90000000000000002" alignment="left" verticalAlignment="center" image="avatar_default" id="0xe-Di-exB"/>
+                                                    <group width="1" alignment="left" layout="vertical" id="xfu-Ao-Wik">
+                                                        <items>
+                                                            <label alignment="left" text="Label" id="zCa-Oc-GNS">
+                                                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                                            </label>
+                                                            <label alignment="left" text="Label" id="h0Z-Qg-Can">
+                                                                <color key="textColor" red="0.99607843139999996" green="0.65760608809999999" blue="0.044811063569999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="font" type="system" pointSize="11"/>
+                                                            </label>
+                                                        </items>
+                                                    </group>
+                                                </items>
+                                            </group>
+                                            <group width="1" alignment="left" layout="vertical" id="mou-6K-zNf">
+                                                <items>
+                                                    <label alignment="left" text="Label" numberOfLines="15" id="X7x-lK-iYq">
+                                                        <fontDescription key="font" type="system" pointSize="14"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="content" destination="X7x-lK-iYq" id="6jT-hc-5Qe"/>
+                                        <outlet property="postTime" destination="h0Z-Qg-Can" id="BQE-Si-woh"/>
+                                        <outlet property="profileImage" destination="0xe-Di-exB" id="2Hg-mG-uMe"/>
+                                        <outlet property="username" destination="zCa-Oc-GNS" id="QKe-Ku-Kn3"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" alignment="left" title="More" id="wlu-9p-5iO">
+                            <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="loadMoreStatus" destination="AgC-eL-Hgc" id="WZU-T9-laQ"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="statusTable" destination="EXm-bW-tCq" id="uhU-bw-dyU"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="30" y="275"/>
         </scene>
     </scenes>
 </document>
