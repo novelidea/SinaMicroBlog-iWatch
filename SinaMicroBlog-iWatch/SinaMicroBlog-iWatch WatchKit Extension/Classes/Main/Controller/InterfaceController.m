@@ -24,8 +24,11 @@
 @property (nonatomic, strong) NSMutableArray* statuses;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceTable *statusTable;
 - (IBAction)refresh;
-- (IBAction)loadMoreStatus;
+- (IBAction)more;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceButton *refreshButton;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceButton *moreButton;
 
+@property (nonatomic, assign) int finishCount;
 @end
 
 
@@ -71,6 +74,7 @@
 }
 
 - (void)loadNewStatus{
+    
     NSString *urlStringBase = @"https://api.weibo.com/2/statuses/friends_timeline.json";
     NSString *urlString = [NSString stringWithFormat:@"%@?access_token=%@", urlStringBase, _account.access_token];
 //    NSLog(@"accesstoken is: %@", _account.access_token);
@@ -92,17 +96,6 @@
                 [self.statuses addObject:status];
             }
             
-//            NSLog(@"number is: %d", self.statuses.count);
-            
-//            int statusCount = 0;
-//            for (MBStatus* status in self.statuses) {
-//                if (statusCount ++ >= 20) {
-//                    break;
-//                }
-//                MBUser* user = status.user;
-//                NSLog(@"%@\n", user.name);
-//            }
-            
             [self dataDownLoaded];
             
 //            [self.tableView reloadData];
@@ -112,6 +105,68 @@
     }] resume];
     
 }
+
+//NSString *maxIdStr = nil;
+//if (self.statuses.count) { // 有微博数据，才需要下拉刷新
+//    long long maxId = [[[self.statuses lastObject] idstr] longLongValue] - 1;
+//    maxIdStr = [NSString stringWithFormat:@"%lld", maxId];
+//}
+//
+//[XPFStatusTool moreStatusWithSinceId:maxIdStr success:^(NSArray *statuses) {
+//    [self.tableView.mj_footer endRefreshing];
+//    
+//    // 把数组中的元素添加进去
+//    [self.statuses addObjectsFromArray:statuses];
+//    
+//    // 刷新表格
+//    [self.tableView reloadData];
+//} failure:^(NSArray *error) {
+//    NSLog(@"%@", error);
+//}];
+
+
+- (void)loadMoreStatus{
+    
+    NSLog(@"begin load more status");
+    NSString *maxIdStr = nil;
+    if (self.statuses.count) {
+        long long maxId = [[[self.statuses lastObject] idstr] longLongValue] - 1;
+        maxIdStr = [NSString stringWithFormat:@"%lld", maxId];
+    }
+    
+    NSString *urlStringBase = @"https://api.weibo.com/2/statuses/friends_timeline.json";
+    NSString *urlString = [NSString stringWithFormat:@"%@?access_token=%@&max_id=%@", urlStringBase, _account.access_token, maxIdStr];
+    NSLog(@"load more string is: %@\n", urlString);
+    //    NSLog(@"accesstoken is: %@", _account.access_token);
+    NSURL *url = [NSURL URLWithString:urlString];
+    //    NSLog(@"url is:\n %@", url);
+    NSURLSession *urlSession = [NSURLSession sharedSession];
+    [[urlSession dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (data != nil) {
+            NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data
+                                                                 options:kNilOptions
+                                                                   error:&error];
+            NSArray* statusArray = [json objectForKey:@"statuses"];
+            //            NSLog(@"apple watch result is:\n%@", statusArray);
+            [self.statuses removeAllObjects];
+            //            NSLog(@"number is: %d", self.statuses.count);
+            
+            for (NSDictionary *dic in statusArray) {
+                MBStatus *status = [MBStatus objectWithKeyValues:dic];
+                [self.statuses addObject:status];
+            }
+            
+            [self dataDownLoaded];
+            
+            
+        }else{
+            NSLog(@"error is: %@", error);
+        }
+    }] resume];
+
+}
+
+
 
 - (void)dataDownLoaded{
     [self.statusTable setNumberOfRows:0 withRowType:@"MainRow"];
@@ -134,45 +189,18 @@
                 NSLog(@"error is: %@", error);
                 return;
             }
-//            NSLog(@"data is: %@", data);
-            //            NSLog(@"%@", status.user.profile_image_url);
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [mainRow.profileImage setImage:[UIImage imageWithData:data]];
-            });
-        }] resume];
-        
-//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0), ^{
-//            NSURL *url = [NSURL URLWithString:status.user.profile_image_url];
-//            
-//            NSURLSession *session = [NSURLSession sharedSession];
-//            [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-//                if ( data == nil ){
-//                    //                NSLog(@"pic data is nil");
-//                    NSLog(@"error is: %@", error);
-//                    return;
-//                }
-//                NSLog(@"data is: %@", data);
-//                UIImage *image = [UIImage imageWithData:data];
-//                [mainRow.profileImage setImage:image];
-//                //            NSLog(@"%@", status.user.profile_image_url);
-////                dispatch_async(dispatch_get_main_queue(), ^{
-////                    [mainRow.profileImage setImage:[UIImage imageWithData:data]];
-////                });
-//            }];
-        
-//            NSError *error = nil;
-//            NSData * data = [[NSData alloc] initWithContentsOfURL:url options:0 error:&error];
-////            NSData *data = [NSData dataWithContentsOfURL:url];
-//            if ( data == nil ){
-////                NSLog(@"pic data is nil");
-//                NSLog(@"error is: %@", error);
-//                return;
-//            }
-////            NSLog(@"%@", status.user.profile_image_url);
 //            dispatch_async(dispatch_get_main_queue(), ^{
-//                [mainRow.profileImage setImage:[UIImage imageWithData:data]];
+                if (data != nil && data.length > 0) {
+                    [mainRow.profileImage setImage:[UIImage imageWithData:data]];
+                }
+                self.finishCount ++;
+                if (self.finishCount == self.statuses.count - 1) {
+                    [self.refreshButton setEnabled:true];
+                    [self.moreButton setEnabled:true];
+                }
+                
 //            });
-//        });
+        }] resume];
         
     }
 
@@ -222,11 +250,22 @@
 
 
 - (IBAction)refresh {
+    [self.refreshButton setEnabled:false];
+    self.finishCount = 0;
+    NSLog(@"beging load new");
     [self loadNewStatus];
 }
 
-- (IBAction)loadMoreStatus {
+- (IBAction)more {
+    [self.moreButton setEnabled:false];
+    self.finishCount = 0;
+    NSLog(@"begin load more");
+    [self loadMoreStatus];
 }
+
+
+
+
 @end
 
 

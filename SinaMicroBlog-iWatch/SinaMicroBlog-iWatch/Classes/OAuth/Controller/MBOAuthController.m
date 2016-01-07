@@ -31,6 +31,41 @@
 @implementation MBOAuthController
 
 
+//- (void)viewDidLoad {
+//    [super viewDidLoad];
+//    // Do any additional setup after loading the view.
+//    UIWebView *web = [[UIWebView alloc] initWithFrame:self.view.frame];
+//    [self.view addSubview:web];
+//    
+//    //https://api.weibo.com/oauth2/authorize?client_id=685404136&redirect_uri=http://www.pengfeixing.com
+//    
+//    //weibo
+//    NSString *baseUrl = @"https://api.weibo.com/oauth2/authorize";
+//    NSString *client_id = @"1196253863";
+//    NSString *redirect_uri=@"http://www.pengfeixing.com";
+//    //    NSString *redirect_uri=@"http://www.baidu.com";
+//    
+//    
+//    //qq
+//    //NSString *client_id_qq = @"1104850437";
+//    
+//    
+//    NSString *urlStr = [NSString stringWithFormat:@"%@?client_id=%@&redirect_uri=%@", baseUrl, client_id, redirect_uri];
+//    
+//    NSURL *url = [NSURL URLWithString:urlStr];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//    
+//    
+//    [web loadRequest:request];
+//    web.delegate = self;
+//    
+//    _session = [WCSession defaultSession];
+//    _session.delegate = self;
+//    [_session activateSession];
+//
+//    
+//}
+//
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -63,14 +98,17 @@
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView{
+    NSLog(@"started");
     [MBProgressHUD showMessage:@"正在加载"];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
+    NSLog(@"HUD finished");
     [MBProgressHUD hideHUD];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+    NSLog(@"HUD failed");
     [MBProgressHUD hideHUD];
 }
 

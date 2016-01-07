@@ -26,11 +26,11 @@
                                                     <imageView width="0.28000000000000003" height="0.90000000000000002" alignment="left" verticalAlignment="center" image="avatar_default" id="0xe-Di-exB"/>
                                                     <group width="1" alignment="left" layout="vertical" id="xfu-Ao-Wik">
                                                         <items>
-                                                            <label alignment="left" text="Label" id="zCa-Oc-GNS">
+                                                            <label alignment="left" id="zCa-Oc-GNS">
                                                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                                                             </label>
-                                                            <label alignment="left" text="Label" id="h0Z-Qg-Can">
+                                                            <label alignment="left" id="h0Z-Qg-Can">
                                                                 <color key="textColor" red="0.99607843139999996" green="0.65760608809999999" blue="0.044811063569999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="font" type="system" pointSize="11"/>
                                                             </label>
@@ -40,7 +40,7 @@
                                             </group>
                                             <group width="1" alignment="left" layout="vertical" id="mou-6K-zNf">
                                                 <items>
-                                                    <label alignment="left" text="Label" numberOfLines="15" id="X7x-lK-iYq">
+                                                    <label alignment="left" numberOfLines="15" id="X7x-lK-iYq">
                                                         <fontDescription key="font" type="system" pointSize="14"/>
                                                     </label>
                                                 </items>
@@ -56,19 +56,21 @@
                                 </tableRow>
                             </items>
                         </table>
-                        <button width="1" alignment="left" title="More" id="wlu-9p-5iO">
+                        <button width="1" alignment="left" title="more" id="mqh-DZ-4Tr">
                             <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="loadMoreStatus" destination="AgC-eL-Hgc" id="WZU-T9-laQ"/>
+                                <action selector="more" destination="AgC-eL-Hgc" id="eNM-67-KTC"/>
                             </connections>
                         </button>
                     </items>
                     <connections>
+                        <outlet property="moreButton" destination="mqh-DZ-4Tr" id="gcn-bb-RWa"/>
+                        <outlet property="refreshButton" destination="hji-Bv-05v" id="G9G-KK-5Ev"/>
                         <outlet property="statusTable" destination="EXm-bW-tCq" id="uhU-bw-dyU"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="30" y="275"/>
+            <point key="canvasLocation" x="89" y="274"/>
         </scene>
     </scenes>
 </document>
