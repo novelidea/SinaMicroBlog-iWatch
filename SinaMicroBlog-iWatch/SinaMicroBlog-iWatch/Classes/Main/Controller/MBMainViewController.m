@@ -7,6 +7,10 @@
 //
 
 #import "MBMainViewController.h"
+#import "MBNewFeatureController.h"
+
+#define MBKeyWindow [UIApplication sharedApplication].keyWindow
+
 
 @interface MBMainViewController ()
 
@@ -17,14 +21,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor clearColor];
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height / 3, self.view.frame.size.width, 50)];
-    label.text = @"Please enjoy your trip using apple Watch";
+    label.text = @"请打开Apple Watch开启微博之旅";
+    label.font = [UIFont systemFontOfSize:24];
     label.textColor = [UIColor redColor];
     label.textAlignment = NSTextAlignmentCenter;
-    
     [self.view addSubview:label];
+    
+    
+    UIButton *newFeatureBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [newFeatureBtn setTitle:@"查看新特性" forState:UIControlStateNormal];
+    [newFeatureBtn setBackgroundImage:[UIImage imageNamed:@"new_feature_finish_button"] forState:UIControlStateNormal];
+    [newFeatureBtn setBackgroundImage:[UIImage imageNamed:@"new_feature_finish_button_highlighted"] forState:UIControlStateHighlighted];
+    [newFeatureBtn sizeToFit];
+    [newFeatureBtn addTarget:self action:@selector(backToNewFeature) forControlEvents:UIControlEventTouchUpInside];
+    newFeatureBtn.center = CGPointMake(self.view.frame.size.width * 0.5, self.view.frame.size.height * 0.9);
+    [self.view addSubview:newFeatureBtn];
+    
+}
+
+
+- (void)backToNewFeature{
+     MBNewFeatureController *nfVC = [[MBNewFeatureController alloc] init];
+     MBKeyWindow.rootViewController = nfVC;
 }
 
 

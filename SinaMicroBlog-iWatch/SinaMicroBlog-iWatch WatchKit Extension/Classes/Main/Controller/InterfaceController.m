@@ -17,6 +17,9 @@
 #import "MBMainRowView.h"
 #import "MBUser.h"
 
+#import "MBDetailInterfaceController.h"
+#import "MBTransferParameter.h"
+
 @interface InterfaceController() <WCSessionDelegate>
 
 @property (nonatomic, strong) WCSession* session;
@@ -127,7 +130,7 @@
 
 - (void)loadMoreStatus{
     
-    NSLog(@"begin load more status");
+//    NSLog(@"begin load more status");
     NSString *maxIdStr = nil;
     if (self.statuses.count) {
         long long maxId = [[[self.statuses lastObject] idstr] longLongValue] - 1;
@@ -136,7 +139,7 @@
     
     NSString *urlStringBase = @"https://api.weibo.com/2/statuses/friends_timeline.json";
     NSString *urlString = [NSString stringWithFormat:@"%@?access_token=%@&max_id=%@", urlStringBase, _account.access_token, maxIdStr];
-    NSLog(@"load more string is: %@\n", urlString);
+//    NSLog(@"load more string is: %@\n", urlString);
     //    NSLog(@"accesstoken is: %@", _account.access_token);
     NSURL *url = [NSURL URLWithString:urlString];
     //    NSLog(@"url is:\n %@", url);
@@ -206,43 +209,14 @@
 
 }
 
-//UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 80, 100, 100)];
-//NSURL *url = [NSURL URLWithString:@"http://cc.cocimg.com/bbs/3g/img/ccicon.png"];
-//NSData *data = [NSData dataWithContentsOfURL:url];
-//UIImage *image = [[UIImage alloc] initWithData:data];
-//imageView.image = image;
-//[self.view addSubview:imageView];
-//
+- (void)table:(WKInterfaceTable *)table didSelectRowAtIndex:(NSInteger)rowIndex{
+    MBTransferParameter *parameter = [[MBTransferParameter alloc] init];
+    parameter.account = self.account;
+    parameter.status = [self.statuses objectAtIndex:rowIndex];
+//    parameter.session = self.session;
+    [self pushControllerWithName:@"MBDetailInterfaceController" context:parameter];
+}
 
-//- (void)loadNewStatus2{
-//    
-//    NSString *urlStringBase = @"https://api.weibo.com/2/statuses/friends_timeline.json";
-//    NSString *urlString = [NSString stringWithFormat:@"%@?access_token=%@", urlStringBase, _account.access_token];
-//    NSURL *url = [NSURL URLWithString:urlString];
-//    
-//    NSURLSession *session = [NSURLSession sharedSession];
-//    [[session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-//        if (data != nil) {
-//            NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data
-//                                                                 options:kNilOptions
-//                                                                   error:&error];
-//            NSArray* statusArray = [json objectForKey:@"statuses"];
-//            NSLog(@"apple watch result is:\n%@", statusArray);
-//            //        for (NSDictionary *dic in statusArray) {
-//            //                XPFStatus *status = [XPFStatus objectWithKeyValues:dic];
-//            //                [self.statuses addObject:status];
-//            //        }
-//            //                [self.tableView reloadData];
-//        }else{
-//            NSLog(@"data is nil");
-//        }
-//    }] resume];
-//    
-//    
-//    
-//
-//}
-//
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];

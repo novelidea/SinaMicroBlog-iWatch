@@ -23,7 +23,7 @@
                                         <items>
                                             <group width="1" alignment="left" id="xvD-rZ-ODY">
                                                 <items>
-                                                    <imageView width="0.28000000000000003" height="0.90000000000000002" alignment="left" verticalAlignment="center" image="avatar_default" id="0xe-Di-exB"/>
+                                                    <imageView width="0.25" height="0.90000000000000002" alignment="left" verticalAlignment="center" image="avatar_default" id="0xe-Di-exB"/>
                                                     <group width="1" alignment="left" layout="vertical" id="xfu-Ao-Wik">
                                                         <items>
                                                             <label alignment="left" id="zCa-Oc-GNS">
@@ -70,7 +70,79 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="89" y="274"/>
+            <point key="canvasLocation" x="-278" y="118"/>
+        </scene>
+        <!--MBDetailInterfaceController-->
+        <scene sceneID="YY1-Ao-bjT">
+            <objects>
+                <controller identifier="MBDetailInterfaceController" id="NgC-7g-7v3" customClass="MBDetailInterfaceController">
+                    <items>
+                        <label alignment="left" text="Label" numberOfLines="20" id="7Ez-6g-4PX">
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                        </label>
+                        <group width="1" alignment="left" layout="vertical" id="Pcv-db-sNG">
+                            <items>
+                                <label alignment="left" id="tog-xB-YYA">
+                                    <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                                <label alignment="left" numberOfLines="30" id="6nE-xd-Iwa">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                                <imageView alignment="center" id="Wpa-6N-uAi"/>
+                                <imageView alignment="center" id="doD-KO-GeT"/>
+                                <imageView alignment="center" id="5ka-zM-A1i"/>
+                                <imageView alignment="center" id="aW6-u2-OaU"/>
+                                <imageView alignment="center" id="h0D-Kf-xKe"/>
+                                <imageView alignment="center" id="Hco-JV-q9d"/>
+                                <imageView alignment="center" id="yNx-Sg-iNm"/>
+                                <imageView alignment="center" id="bhF-T9-v8F"/>
+                                <imageView alignment="center" id="c3S-dL-yTB"/>
+                                <group width="1" alignment="left" id="u8w-dD-EB0">
+                                    <items>
+                                        <button width="0.5" alignment="left" title="Share" id="f49-x6-4Ce">
+                                            <connections>
+                                                <action selector="Share" destination="NgC-7g-7v3" id="0TD-eZ-iqF"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.5" alignment="left" title="Like" id="D2C-G4-gx8">
+                                            <connections>
+                                                <action selector="Like" destination="NgC-7g-7v3" id="ywQ-Jn-OfT"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="content" destination="7Ez-6g-4PX" id="6Sj-wT-0mU"/>
+                        <outlet property="eighthImage" destination="bhF-T9-v8F" id="no3-ul-ZBQ"/>
+                        <outlet property="fifthImage" destination="h0D-Kf-xKe" id="r7K-Rg-UQ2"/>
+                        <outlet property="firstImage" destination="Wpa-6N-uAi" id="D3G-Cu-GCg"/>
+                        <outlet property="fourthImage" destination="aW6-u2-OaU" id="ulQ-GH-y22"/>
+                        <outlet property="ninthImage" destination="c3S-dL-yTB" id="TgZ-eq-DGs"/>
+                        <outlet property="retweeted_name" destination="tog-xB-YYA" id="fNm-ZF-v3Z"/>
+                        <outlet property="retweeted_text" destination="6nE-xd-Iwa" id="10f-1X-nyl"/>
+                        <outlet property="secondImage" destination="doD-KO-GeT" id="hvg-Lb-yjy"/>
+                        <outlet property="seventhImage" destination="yNx-Sg-iNm" id="zwY-z5-rkx"/>
+                        <outlet property="sixthImage" destination="Hco-JV-q9d" id="JIm-1P-FoZ"/>
+                        <outlet property="thirdImage" destination="5ka-zM-A1i" id="ZnR-bK-MK9"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-82" y="190.75"/>
+        </scene>
+        <!--Image Detail Controller-->
+        <scene sceneID="yly-ue-7Vr">
+            <objects>
+                <controller id="eXN-pK-RjF" customClass="MBImageDetailController">
+                    <items>
+                        <imageView alignment="left" id="JcK-2Y-IzI"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="137" y="120"/>
         </scene>
     </scenes>
 </document>

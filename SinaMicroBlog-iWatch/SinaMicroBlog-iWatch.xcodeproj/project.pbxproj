@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA05B21F1C430E9B00FCFC85 /* MBInfoTranslateController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA05B21E1C430E9B00FCFC85 /* MBInfoTranslateController.m */; };
+		DA0D14E91C3EF3980001C3C5 /* MBDetailInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0D14E81C3EF3980001C3C5 /* MBDetailInterfaceController.m */; };
+		DA0D14ED1C3F1B7B0001C3C5 /* MBTransferParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0D14EC1C3F1B7B0001C3C5 /* MBTransferParameter.m */; };
+		DA0D14F01C3F480E0001C3C5 /* MBNewFeatureController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0D14EF1C3F480E0001C3C5 /* MBNewFeatureController.m */; };
+		DA0D14F31C3F486D0001C3C5 /* MBNewFeatureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0D14F21C3F486D0001C3C5 /* MBNewFeatureCell.m */; };
 		DA372D491C3D883D00494B96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA372D471C3D883D00494B96 /* Main.storyboard */; };
 		DA372D4B1C3D883D00494B96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA372D4A1C3D883D00494B96 /* Assets.xcassets */; };
 		DA372D4E1C3D883D00494B96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA372D4C1C3D883D00494B96 /* LaunchScreen.storyboard */; };
@@ -113,6 +118,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DA05B21D1C430E9B00FCFC85 /* MBInfoTranslateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBInfoTranslateController.h; sourceTree = "<group>"; };
+		DA05B21E1C430E9B00FCFC85 /* MBInfoTranslateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBInfoTranslateController.m; sourceTree = "<group>"; };
+		DA0D14E71C3EF3980001C3C5 /* MBDetailInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBDetailInterfaceController.h; sourceTree = "<group>"; };
+		DA0D14E81C3EF3980001C3C5 /* MBDetailInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBDetailInterfaceController.m; sourceTree = "<group>"; };
+		DA0D14EB1C3F1B7B0001C3C5 /* MBTransferParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTransferParameter.h; sourceTree = "<group>"; };
+		DA0D14EC1C3F1B7B0001C3C5 /* MBTransferParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTransferParameter.m; sourceTree = "<group>"; };
+		DA0D14EE1C3F480E0001C3C5 /* MBNewFeatureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBNewFeatureController.h; sourceTree = "<group>"; };
+		DA0D14EF1C3F480E0001C3C5 /* MBNewFeatureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBNewFeatureController.m; sourceTree = "<group>"; };
+		DA0D14F11C3F486D0001C3C5 /* MBNewFeatureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBNewFeatureCell.h; sourceTree = "<group>"; };
+		DA0D14F21C3F486D0001C3C5 /* MBNewFeatureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBNewFeatureCell.m; sourceTree = "<group>"; };
 		DA372D3B1C3D883D00494B96 /* SinaMicroBlog-iWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SinaMicroBlog-iWatch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA372D481C3D883D00494B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA372D4A1C3D883D00494B96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -239,6 +254,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA0D14EA1C3F1B630001C3C5 /* Parameter */ = {
+			isa = PBXGroup;
+			children = (
+				DA0D14EB1C3F1B7B0001C3C5 /* MBTransferParameter.h */,
+				DA0D14EC1C3F1B7B0001C3C5 /* MBTransferParameter.m */,
+			);
+			path = Parameter;
+			sourceTree = "<group>";
+		};
 		DA372D321C3D883D00494B96 = {
 			isa = PBXGroup;
 			children = (
@@ -379,6 +403,8 @@
 		DA372DA01C3D8AD200494B96 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DA0D14EE1C3F480E0001C3C5 /* MBNewFeatureController.h */,
+				DA0D14EF1C3F480E0001C3C5 /* MBNewFeatureController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -393,6 +419,8 @@
 		DA372DA21C3D8AD200494B96 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DA0D14F11C3F486D0001C3C5 /* MBNewFeatureCell.h */,
+				DA0D14F21C3F486D0001C3C5 /* MBNewFeatureCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -412,6 +440,8 @@
 			children = (
 				DA372DB41C3D8C0200494B96 /* MBOAuthController.h */,
 				DA372DB51C3D8C0200494B96 /* MBOAuthController.m */,
+				DA05B21D1C430E9B00FCFC85 /* MBInfoTranslateController.h */,
+				DA05B21E1C430E9B00FCFC85 /* MBInfoTranslateController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -549,6 +579,8 @@
 		DA372E011C3DA01900494B96 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DA0D14E71C3EF3980001C3C5 /* MBDetailInterfaceController.h */,
+				DA0D14E81C3EF3980001C3C5 /* MBDetailInterfaceController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -623,6 +655,7 @@
 		DA372E0D1C3DA01900494B96 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				DA0D14EA1C3F1B630001C3C5 /* Parameter */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -866,9 +899,12 @@
 				DA372DF01C3D8E8700494B96 /* AFURLSessionManager.m in Sources */,
 				DA372DB21C3D8AD200494B96 /* AppDelegate.m in Sources */,
 				DA372DF71C3D8FA500494B96 /* MBAccountTool.m in Sources */,
+				DA0D14F01C3F480E0001C3C5 /* MBNewFeatureController.m in Sources */,
 				DA372DF31C3D8EEC00494B96 /* MBAccount.m in Sources */,
 				DA372DBF1C3D8D5700494B96 /* MBProgressHUD.m in Sources */,
+				DA0D14F31C3F486D0001C3C5 /* MBNewFeatureCell.m in Sources */,
 				DA372DEB1C3D8E8700494B96 /* AFNetworkReachabilityManager.m in Sources */,
+				DA05B21F1C430E9B00FCFC85 /* MBInfoTranslateController.m in Sources */,
 				DA372DBD1C3D8D5700494B96 /* MBProgressHUD+MJ.m in Sources */,
 				DA372DED1C3D8E8700494B96 /* AFURLConnectionOperation.m in Sources */,
 				DA372DEA1C3D8E8700494B96 /* AFHTTPSessionManager.m in Sources */,
@@ -913,6 +949,8 @@
 				DA372E731C3DD5C900494B96 /* MJProperty.m in Sources */,
 				DA372E721C3DD5C900494B96 /* MJFoundation.m in Sources */,
 				DA372E701C3DD5C900494B96 /* MJDictionaryCache.m in Sources */,
+				DA0D14ED1C3F1B7B0001C3C5 /* MBTransferParameter.m in Sources */,
+				DA0D14E91C3EF3980001C3C5 /* MBDetailInterfaceController.m in Sources */,
 				DA372E0E1C3DA01900494B96 /* InterfaceController.m in Sources */,
 				DA372E541C3DD4B500494B96 /* MBPhoto.m in Sources */,
 				DA372E751C3DD5C900494B96 /* MJPropertyType.m in Sources */,
