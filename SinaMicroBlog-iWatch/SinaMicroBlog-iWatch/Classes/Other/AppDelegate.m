@@ -11,6 +11,8 @@
 #import "MBOAuthController.h"
 #import "MBAccountTool.h"
 #import "MBMainViewController.h"
+#import "MBAccount.h"
+#import "MBAccountTransferController.h"
 
 @interface AppDelegate ()
 
@@ -22,14 +24,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-//    if (0 && [MBAccountTool account]) {
-//        MBMainViewController *mainVC = [[MBMainViewController alloc] init];
-//        self.window.rootViewController = mainVC;
-//    }else{
+    if ([MBAccountTool account]) {
+        MBMainViewController *mainVC = [[MBMainViewController alloc] init];
+        self.window.rootViewController = mainVC;
+        MBAccountTransferController *transferVC = [[MBAccountTransferController alloc] init];
+        [transferVC transferAccount:[MBAccountTool account]];
+    }else{
         MBOAuthController *oauthVC = [[MBOAuthController alloc] init];
         self.window.rootViewController = oauthVC;
-        
-//    }
+    }
     
     [self.window makeKeyAndVisible];
     return YES;

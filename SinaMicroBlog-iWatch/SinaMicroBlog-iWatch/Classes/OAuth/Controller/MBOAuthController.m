@@ -12,8 +12,11 @@
 #import "MBAccount.h"
 #import "MBAccountTool.h"
 #import "MBMainViewController.h"
-#import <WatchConnectivity/WatchConnectivity.h>
+//#import <WatchConnectivity/WatchConnectivity.h>
 #import "MBRootTool.h"
+#import "MBAccountTransferController.h"
+
+//#import "MBInfoTranslateController.h"
 
 
 #define XPFBaseUrl @"https://api.weibo.com/oauth2/authorize"
@@ -23,9 +26,10 @@
 
 #define MBKeyWindow [UIApplication sharedApplication].keyWindow
 
-@interface MBOAuthController () <UIWebViewDelegate, WCSessionDelegate>
+@interface MBOAuthController () <UIWebViewDelegate>
 
-@property (nonatomic, strong) WCSession* session;
+//@property (nonatomic, strong) WCSession* session;
+//@property (nonatomic, strong) MBInfoTranslateController *infoTranslateVC;
 
 @end
 
@@ -35,6 +39,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    self.infoTranslateVC = [[MBInfoTranslateController alloc] init];
     
     // Do any additional setup after loading the view.
     UIWebView *web = [[UIWebView alloc] initWithFrame:self.view.frame];
@@ -59,9 +65,9 @@
     [web loadRequest:request];
     web.delegate = self;
     
-    _session = [WCSession defaultSession];
-    _session.delegate = self;
-    [_session activateSession];
+//    _session = [WCSession defaultSession];
+//    _session.delegate = self;
+//    [_session activateSession];
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView{
@@ -123,25 +129,30 @@
 
         [MBAccountTool saveAccount:account];
         
+        MBAccountTransferController *transferVC = [[MBAccountTransferController alloc] init];
+        [transferVC transferAccount:account];
+        
 //        MBMainViewController *mainVC = [[MBMainViewController alloc] init];
 //        MBKeyWindow.rootViewController = mainVC;
         
         
         [MBRootTool chooseRootViewController:MBKeyWindow];
         
-        [self sendInfo:responseObject];
+//        [self sendInfo:responseObject];
+//        MBInfoTranslateController *translateVC = [[MBInfoTranslateController alloc] init];
+//        [self.infoTranslateVC sendInfo:responseObject];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@",error);
     }];
 }
 
-- (void)sendInfo:(NSDictionary *)dic{
-    [self.session sendMessage:dic replyHandler:^(NSDictionary<NSString *,id> * _Nonnull replyMessage) {
-        
-    } errorHandler:^(NSError * _Nonnull error) {
-        
-    }];
-}
+//- (void)sendInfo:(NSDictionary *)dic{
+//    [self.session sendMessage:dic replyHandler:^(NSDictionary<NSString *,id> * _Nonnull replyMessage) {
+//        
+//    } errorHandler:^(NSError * _Nonnull error) {
+//        
+//    }];
+//}
 
 @end

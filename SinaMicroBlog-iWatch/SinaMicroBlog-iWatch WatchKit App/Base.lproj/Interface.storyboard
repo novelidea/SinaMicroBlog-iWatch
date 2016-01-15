@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--InterfaceController-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                <controller identifier="InterfaceController" id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
                         <button width="1" alignment="left" title="Refresh" id="hji-Bv-05v">
                             <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -142,7 +142,18 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="137" y="120"/>
+            <point key="canvasLocation" x="95" y="118"/>
+        </scene>
+        <!--LoginController-->
+        <scene sceneID="JQa-cW-VC8">
+            <objects>
+                <controller identifier="LoginController" id="is0-Mu-WuM" customClass="MBLoginController">
+                    <items>
+                        <label alignment="left" text="Please Login using iPhone" textAlignment="center" baselineAdjustment="alignCenters" numberOfLines="3" id="C1a-QX-D3T"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="282" y="118"/>
         </scene>
     </scenes>
 </document>

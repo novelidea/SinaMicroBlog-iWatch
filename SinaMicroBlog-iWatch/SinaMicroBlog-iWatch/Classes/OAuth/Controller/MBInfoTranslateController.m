@@ -7,8 +7,11 @@
 //
 
 #import "MBInfoTranslateController.h"
+#import <WatchConnectivity/WatchConnectivity.h>
 
-@interface MBInfoTranslateController ()
+@interface MBInfoTranslateController ()<WCSessionDelegate>
+
+@property (nonatomic, strong) WCSession* session;
 
 @end
 
@@ -16,7 +19,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    _session = [WCSession defaultSession];
+    _session.delegate = self;
+    [_session activateSession];
+}
+
+
+- (void)sendInfo:(NSDictionary *)dic{
+    [self.session sendMessage:dic replyHandler:^(NSDictionary<NSString *,id> * _Nonnull replyMessage) {
+        
+    } errorHandler:^(NSError * _Nonnull error) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

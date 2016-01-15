@@ -10,4 +10,6 @@
 
 @interface MBInfoTranslateController : UIViewController
 
+- (void)sendInfo:(NSDictionary *)dic;
+
 @end
