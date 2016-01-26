@@ -55,7 +55,7 @@
     
     
     // 开始按钮
-    self.startButton.center = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height * 0.9);
+    self.startButton.center = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height * 0.8);
 }
 
 - (void)setImage:(UIImage *)image{

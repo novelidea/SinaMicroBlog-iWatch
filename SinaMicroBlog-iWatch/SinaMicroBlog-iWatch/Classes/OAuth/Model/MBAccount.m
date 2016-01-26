@@ -29,20 +29,19 @@
     return account;
 }
 
-//@property (nonatomic, copy) NSString *access_token;
-//@property (nonatomic, copy) NSString *expires_in;
-//@property (nonatomic, copy) NSString *remind_in;
-//@property (nonatomic, copy) NSString *uid;
-//@property (nonatomic, strong) NSDate *expires_date;
-//
-
 + (NSDictionary *)dicWithAccount:(MBAccount *)account{
-    NSDictionary *dic = [[NSDictionary alloc] init];
-    dic = @{@"access_token": account.access_token,
-            @"expires_in" : account.expires_date,
-            @"remind_in" : account.remind_in,
-            @"uid" : account.uid,
-            @"expires_date" : account.expires_date};
+//    NSDictionary *dic = [[NSDictionary alloc] init];
+//    dic = @{@"access_token": account.access_token,
+//            @"expires_in" : account.expires_date,
+//            @"remind_in" : account.remind_in,
+//            @"uid" : account.uid,
+//            @"expires_date" : account.expires_date};
+    NSDictionary *dic = @{@"access_token": account.access_token != nil ? account.access_token : @"",
+                          @"expires_in" : account.expires_in != nil ? account.expires_in : @"",
+                          @"remind_in" : account.remind_in != nil ? account.remind_in : @"",
+                          @"uid" : account.uid != nil ? account.uid : @"",
+                          @"expires_date" : account.expires_date != nil ? account.expires_date : [NSDate date]};
+    
     return dic;
 }
 

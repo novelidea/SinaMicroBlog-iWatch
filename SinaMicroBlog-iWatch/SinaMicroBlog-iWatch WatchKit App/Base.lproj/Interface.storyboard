@@ -10,7 +10,7 @@
             <objects>
                 <controller identifier="InterfaceController" id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <button width="1" alignment="left" title="Refresh" id="hji-Bv-05v">
+                        <button width="1" alignment="left" title="刷新" id="hji-Bv-05v">
                             <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="refresh" destination="AgC-eL-Hgc" id="xaY-uF-54O"/>
@@ -56,7 +56,7 @@
                                 </tableRow>
                             </items>
                         </table>
-                        <button width="1" alignment="left" title="more" id="mqh-DZ-4Tr">
+                        <button width="1" alignment="left" title="更多" id="mqh-DZ-4Tr">
                             <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="more" destination="AgC-eL-Hgc" id="eNM-67-KTC"/>
@@ -70,7 +70,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-278" y="118"/>
+            <point key="canvasLocation" x="-340" y="118"/>
         </scene>
         <!--MBDetailInterfaceController-->
         <scene sceneID="YY1-Ao-bjT">
@@ -100,14 +100,9 @@
                                 <imageView alignment="center" id="c3S-dL-yTB"/>
                                 <group width="1" alignment="left" id="u8w-dD-EB0">
                                     <items>
-                                        <button width="0.5" alignment="left" title="Share" id="f49-x6-4Ce">
+                                        <button width="1" alignment="left" title="Share" id="f49-x6-4Ce">
                                             <connections>
                                                 <action selector="Share" destination="NgC-7g-7v3" id="0TD-eZ-iqF"/>
-                                            </connections>
-                                        </button>
-                                        <button width="0.5" alignment="left" title="Like" id="D2C-G4-gx8">
-                                            <connections>
-                                                <action selector="Like" destination="NgC-7g-7v3" id="ywQ-Jn-OfT"/>
                                             </connections>
                                         </button>
                                     </items>
@@ -126,12 +121,13 @@
                         <outlet property="retweeted_text" destination="6nE-xd-Iwa" id="10f-1X-nyl"/>
                         <outlet property="secondImage" destination="doD-KO-GeT" id="hvg-Lb-yjy"/>
                         <outlet property="seventhImage" destination="yNx-Sg-iNm" id="zwY-z5-rkx"/>
+                        <outlet property="shareBtn" destination="f49-x6-4Ce" id="VQ2-si-4ZQ"/>
                         <outlet property="sixthImage" destination="Hco-JV-q9d" id="JIm-1P-FoZ"/>
                         <outlet property="thirdImage" destination="5ka-zM-A1i" id="ZnR-bK-MK9"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-82" y="190.75"/>
+            <point key="canvasLocation" x="-166" y="190.75"/>
         </scene>
         <!--Image Detail Controller-->
         <scene sceneID="yly-ue-7Vr">

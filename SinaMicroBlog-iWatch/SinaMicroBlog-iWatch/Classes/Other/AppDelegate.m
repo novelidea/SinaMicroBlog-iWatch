@@ -24,11 +24,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
+//    NSLog(@"[MBAccountTool account] = %@",[MBAccountTool account]);
+    
     if ([MBAccountTool account]) {
         MBMainViewController *mainVC = [[MBMainViewController alloc] init];
         self.window.rootViewController = mainVC;
-        MBAccountTransferController *transferVC = [[MBAccountTransferController alloc] init];
-        [transferVC transferAccount:[MBAccountTool account]];
+//        MBAccountTransferController *transferVC = [[MBAccountTransferController alloc] init];
+//        [transferVC transferAccount:[MBAccountTool account]];
     }else{
         MBOAuthController *oauthVC = [[MBOAuthController alloc] init];
         self.window.rootViewController = oauthVC;

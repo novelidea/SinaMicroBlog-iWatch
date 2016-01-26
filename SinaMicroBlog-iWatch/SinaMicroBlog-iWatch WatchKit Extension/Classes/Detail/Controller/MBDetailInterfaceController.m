@@ -40,7 +40,9 @@
 @property (nonatomic, strong) MBStatus *retweeted_status;
 
 - (IBAction)Share;
-- (IBAction)Like;
+//- (IBAction)Like;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceButton *shareBtn;
+//@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceButton *likeBtn;
 
 @end
 
@@ -152,30 +154,68 @@
     [self shareStatus];
 }
 
-- (IBAction)Like {
-    [self likeStatus];
-}
+//- (IBAction)Like {
+//    [self likeStatus];
+//}
+//
+//- (IBAction)testFirstImageBtn {
+//}
 
-- (IBAction)testFirstImageBtn {
-}
-
-- (void)likeStatus{
-    NSString *parameter = [NSString stringWithFormat:@"access_token=%@&id=%@", self.account.access_token, self.status.idstr];
-    
-    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    sessionConfiguration.HTTPAdditionalHeaders = @{
-                                                   @"api-key"       : @"API_KEY"
-                                                   };
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
-    NSURL *url = [NSURL URLWithString:@"https://api.weibo.com/2/attitudes/create.json"];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    request.HTTPBody = [parameter dataUsingEncoding:NSUTF8StringEncoding];
-    request.HTTPMethod = @"POST";
-    NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        NSLog(@"response is: \n%@", response);
-    }];
-    [postDataTask resume];
-}
+//- (void)likeStatus{
+//    NSLog(@"like");
+//    NSString *parameter = [NSString stringWithFormat:@"access_token=%@&id=%@", self.account.access_token, self.status.idstr];
+//    
+//    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+//    sessionConfiguration.HTTPAdditionalHeaders = @{
+//                                                   @"api-key"       : @"API_KEY"
+//                                                   };
+//    NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
+//    NSURL *url = [NSURL URLWithString:@"https://api.weibo.com/2/attitudes/create.json"];
+//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+//    request.HTTPBody = [parameter dataUsingEncoding:NSUTF8StringEncoding];
+//    request.HTTPMethod = @"POST";
+//    NSURLSessionDataTask *likeDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+//        NSLog(@"response is: \n%@", response);
+//        if (error == nil) {
+//            [self.likeBtn setEnabled:false];
+//            [self.likeBtn setBackgroundColor:[UIColor orangeColor]];
+//        }
+//        NSLog(@"error is: %@", error);
+//    }];
+//    [likeDataTask resume];
+//    
+////    NSString *parameter = [NSString stringWithFormat:@"access_token=%@&id=%@", self.account.access_token, self.status.idstr];
+////    
+////    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+////    sessionConfiguration.HTTPAdditionalHeaders = @{
+////                                                   @"api-key"       : @"API_KEY"
+////                                                   };
+////    NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
+////    NSURL *url = [NSURL URLWithString:@"https://api.weibo.com/2/attitudes/create.json"];
+////    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+////    request.HTTPBody = [parameter dataUsingEncoding:NSUTF8StringEncoding];
+////    request.HTTPMethod = @"POST";
+////    NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+////        NSLog(@"response is: \n%@", response);
+////    }];
+////    [postDataTask resume];
+////
+////    NSString *parameter = [NSString stringWithFormat:@"attitude=simle&access_token=%@&id=%@", self.account.access_token, self.status.idstr];
+////    
+////    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+////    sessionConfiguration.HTTPAdditionalHeaders = @{
+////                                                   @"api-key"       : @"API_KEY"
+////                                                   };
+////    NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
+////    NSURL *url = [NSURL URLWithString:@"https://api.weibo.com/2/attitudes/create.json"];
+////    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+////    request.HTTPBody = [parameter dataUsingEncoding:NSUTF8StringEncoding];
+////    request.HTTPMethod = @"POST";
+////    NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+////        NSLog(@"response is: \n%@", response);
+////    }];
+////    [postDataTask resume];
+//}
 
 - (void)shareStatus{
     
@@ -192,6 +232,10 @@
     request.HTTPMethod = @"POST";
     NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         NSLog(@"response is: \n%@", response);
+        if (error == nil) {
+            [self.shareBtn setEnabled:false];
+            [self.shareBtn setBackgroundColor:[UIColor orangeColor]];
+        }
     }];
     [postDataTask resume];
     

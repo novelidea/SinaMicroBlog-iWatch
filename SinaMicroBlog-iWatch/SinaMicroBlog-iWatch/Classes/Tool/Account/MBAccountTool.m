@@ -9,7 +9,9 @@
 #import "MBAccountTool.h"
 #import "MBAccount.h"
 
-#define MBAccountFileName [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingString:@"account.data"]
+#define MBAccountFileName [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingString:@"/account.data"]
+
+
 
 @implementation MBAccountTool
 
@@ -17,8 +19,6 @@ static MBAccount *_account;
 
 + (void)saveAccount:(MBAccount *)account{
     [NSKeyedArchiver archiveRootObject:account toFile:MBAccountFileName];
-    NSLog(@"%@",MBAccountFileName);
-    
 }
 
 + (MBAccount *)account{
@@ -32,3 +32,5 @@ static MBAccount *_account;
 }
 
 @end
+
+

@@ -34,6 +34,8 @@
 
 
 @property (nonatomic, assign) int finishCount;
+
+@property (nonatomic, assign) BOOL loadPic;
 @end
 
 
@@ -59,16 +61,21 @@
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
     
+//    if (context != nil) {
+//        self.account = context;
+//    }
 //    NSLog(@"interface controller controller id is: %@", [self valueForKey:@"_viewControllerID"]);
     
+//    if (nil == self.account || nil == self.account.access_token) {
     if (nil == [MBWKAccountTool account]) {
+       
 //        [self pushControllerWithName:@"LoginController" context:nil];
 //
         NSMutableArray *controllerName = [NSMutableArray array];
         [controllerName addObject:@"LoginController"];
         [WKInterfaceController reloadRootControllersWithNames:controllerName contexts:nil];
     }else{
-        [self.statusTable setNumberOfRows:20 withRowType:@"statusRow"];
+//        [self.statusTable setNumberOfRows:20 withRowType:@"statusRow"];
         [self loadNewStatus];
     }
 
@@ -85,11 +92,11 @@
     [self.refreshButton setEnabled:false];
     [self.moreButton setEnabled:false];
     
-    NSLog(@"load new status");
-    NSLog(@"load accesstoken is: %@", self.account.access_token);
+//    NSLog(@"load new status");
+//    NSLog(@"load accesstoken is: %@", self.account.access_token);
     NSString *urlStringBase = @"https://api.weibo.com/2/statuses/friends_timeline.json";
     NSString *urlString = [NSString stringWithFormat:@"%@?access_token=%@", urlStringBase, self.account.access_token];
-    NSLog(@"urlString is: %@",urlString);
+//    NSLog(@"urlString is: %@",urlString);
     NSURL *url = [NSURL URLWithString:urlString];
     //    NSLog(@"url is:\n %@", url);
     NSURLSession *urlSession = [NSURLSession sharedSession];
@@ -99,30 +106,15 @@
                                                                  options:kNilOptions
                                                                    error:&error];
             NSArray* statusArray = [json objectForKey:@"statuses"];
-            //            NSLog(@"apple watch result is:\n%@", statusArray);
-//            MBStatus *firstStatus = [statusArray firstObject];
-//            if (firstStatus.user.name != nil) {
-//                NSLog(@"first status idstr is : %@", firstStatus.idstr);
-//            }
-//            if (self.statuses.count != 0) {
-//                NSLog(@"status idstr is : %@ ", [[self.statuses firstObject] idstr]);
-//            }
-            
-//            if (firstStatus == nil || self.statuses.count == 0 || ([firstStatus.idstr longLongValue] > [[[self.statuses firstObject] idstr] longLongValue])) {
-//                [self.statusTable setNumberOfRows:0 withRowType:@"MainRow"];
-                [self.statuses removeAllObjects];
+            [self.statuses removeAllObjects];
                 //            NSLog(@"number is: %d", self.statuses.count);
                 
-                for (NSDictionary *dic in statusArray) {
-                    MBStatus *status = [MBStatus objectWithKeyValues:dic];
-                    [self.statuses addObject:status];
-                }
-                
-                [self dataDownLoaded];
-//            }else{
-//                [self.refreshButton setEnabled:true];
-//                [self.moreButton setEnabled:true];
-//            }
+            for (NSDictionary *dic in statusArray) {
+                MBStatus *status = [MBStatus objectWithKeyValues:dic];
+                [self.statuses addObject:status];
+            }
+            NSLog(@"count: %d", self.statuses.count);
+            [self dataDownLoaded];
             
         }else{
             [self.refreshButton setEnabled:true];
@@ -184,42 +176,62 @@
 
 - (void)dataDownLoaded{
     NSLog(@"data downloaded");
-//    [self.statusTable setNumberOfRows:0 withRowType:@"MainRow"];
-//    self.isClear = true;
     [self.statusTable setNumberOfRows:self.statuses.count withRowType:@"MainRow"];
     
+    if (self.statuses == nil || self.statuses.count == 0) {
+        NSLog(@"no data");
+        [self.refreshButton setEnabled:true];
+        [self.moreButton setEnabled:true];
+    }
+    
+    self.loadPic = true;
     for(int i = 0; i < self.statuses.count; i ++){
         MBStatus *status = [self.statuses objectAtIndex:i];
         MBMainRowView *mainRow = [self.statusTable rowControllerAtIndex:i];
         [mainRow.username setText:status.user.name];
         [mainRow.postTime setText:status.created_at];
         [mainRow.content setText:status.text];
-//        [mainRow.profileImage setImage:[UIImage imageNamed:@"avatar_default"]];
 
-        NSURL *url = [NSURL URLWithString:status.user.profile_image_url];
-        
-        NSURLSession *session = [NSURLSession sharedSession];
-        [[session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-            if ( data == nil ){
-                //                NSLog(@"pic data is nil");
-                NSLog(@"error is: %@", error);
-                return;
-            }
-            dispatch_async(dispatch_get_main_queue(), ^{
-//                NSLog(@"data is: %@", data);
-                NSLog(@"finish count is: %d, sum is: %d", self.finishCount, self.statuses.count);
-                self.finishCount ++;
-                if (self.finishCount == self.statuses.count - 1) {
+        if(self.loadPic){
+            NSURL *url = [NSURL URLWithString:status.user.profile_image_url];
+            
+            NSURLSession *session = [NSURLSession sharedSession];
+            
+            NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
+            
+            sessionConfig.timeoutIntervalForRequest = 4.0;
+            
+            [[session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                NSLog(@"%d", data.length);
+                if (error != nil) {
+                    NSLog(@"error is: %@", error);
                     [self.refreshButton setEnabled:true];
                     [self.moreButton setEnabled:true];
+                    self.loadPic = false;
+                }else{
+                    if ( data == nil ){
+                        [self.refreshButton setEnabled:true];
+                        [self.moreButton setEnabled:true];
+                        self.loadPic = false;
+                        return;
+                    }else{
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                            self.finishCount ++;
+                            if (self.finishCount == self.statuses.count - 1) {
+                                [self.refreshButton setEnabled:true];
+                                [self.moreButton setEnabled:true];
+                            }
+                            
+                            if (mainRow != nil && data != nil && data.length > 0) {
+                                [mainRow.profileImage setImage:[UIImage imageWithData:data]];
+                            }
+                        });
+                    }
+                    
                 }
-                if (mainRow != nil && data != nil && data.length > 0) {
-                    [mainRow.profileImage setImage:[UIImage imageWithData:data]];
-                }
-                
-            
-            });
-        }] resume];
+            }] resume];
+
+        }
         
     }
 
@@ -229,7 +241,6 @@
     MBTransferParameter *parameter = [[MBTransferParameter alloc] init];
     parameter.account = self.account;
     parameter.status = [self.statuses objectAtIndex:rowIndex];
-//    parameter.session = self.session;
     [self pushControllerWithName:@"MBDetailInterfaceController" context:parameter];
 }
 
@@ -248,7 +259,11 @@
 - (IBAction)more {
     self.finishCount = 0;
     NSLog(@"begin load more");
-    [self loadMoreStatus];
+    if (self.statuses == nil || self.statuses.count == 0) {
+        [self refresh];
+    }else{
+        [self loadMoreStatus];
+    }
 }
 
 

@@ -9,7 +9,7 @@
 #import "MBWKAccountTool.h"
 #import "MBAccount.h"
 
-#define MBWKAccountFileName [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingString:@"account.data"]
+#define MBWKAccountFileName [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingString:@"/wkaccount.data"]
 
 @implementation MBWKAccountTool
 
@@ -18,7 +18,8 @@ static MBAccount *_account;
 + (void)saveAccount:(MBAccount *)account{
     [NSKeyedArchiver archiveRootObject:account toFile:MBWKAccountFileName];
     NSLog(@"%@",MBWKAccountFileName);
-    
+    NSString* fileContents =[NSString stringWithContentsOfFile:MBWKAccountFileName encoding:NSUTF8StringEncoding error:nil];
+    NSLog(@"file content is: %@", fileContents);
 }
 
 + (MBAccount *)account{
