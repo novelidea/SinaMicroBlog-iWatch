@@ -5,12 +5,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--InterfaceController-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                <controller identifier="InterfaceController" id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <button width="1" alignment="left" title="Refresh" id="hji-Bv-05v">
+                        <button width="1" alignment="left" title="刷新" id="hji-Bv-05v">
                             <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="refresh" destination="AgC-eL-Hgc" id="xaY-uF-54O"/>
@@ -23,14 +23,14 @@
                                         <items>
                                             <group width="1" alignment="left" id="xvD-rZ-ODY">
                                                 <items>
-                                                    <imageView width="0.28000000000000003" height="0.90000000000000002" alignment="left" verticalAlignment="center" image="avatar_default" id="0xe-Di-exB"/>
+                                                    <imageView width="0.25" height="0.90000000000000002" alignment="left" verticalAlignment="center" image="avatar_default" id="0xe-Di-exB"/>
                                                     <group width="1" alignment="left" layout="vertical" id="xfu-Ao-Wik">
                                                         <items>
-                                                            <label alignment="left" text="Label" id="zCa-Oc-GNS">
+                                                            <label alignment="left" id="zCa-Oc-GNS">
                                                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                                                             </label>
-                                                            <label alignment="left" text="Label" id="h0Z-Qg-Can">
+                                                            <label alignment="left" id="h0Z-Qg-Can">
                                                                 <color key="textColor" red="0.99607843139999996" green="0.65760608809999999" blue="0.044811063569999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <fontDescription key="font" type="system" pointSize="11"/>
                                                             </label>
@@ -40,7 +40,7 @@
                                             </group>
                                             <group width="1" alignment="left" layout="vertical" id="mou-6K-zNf">
                                                 <items>
-                                                    <label alignment="left" text="Label" numberOfLines="15" id="X7x-lK-iYq">
+                                                    <label alignment="left" numberOfLines="15" id="X7x-lK-iYq">
                                                         <fontDescription key="font" type="system" pointSize="14"/>
                                                     </label>
                                                 </items>
@@ -56,19 +56,100 @@
                                 </tableRow>
                             </items>
                         </table>
-                        <button width="1" alignment="left" title="More" id="wlu-9p-5iO">
+                        <button width="1" alignment="left" title="更多" id="mqh-DZ-4Tr">
                             <color key="titleColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="loadMoreStatus" destination="AgC-eL-Hgc" id="WZU-T9-laQ"/>
+                                <action selector="more" destination="AgC-eL-Hgc" id="eNM-67-KTC"/>
                             </connections>
                         </button>
                     </items>
                     <connections>
+                        <outlet property="moreButton" destination="mqh-DZ-4Tr" id="gcn-bb-RWa"/>
+                        <outlet property="refreshButton" destination="hji-Bv-05v" id="G9G-KK-5Ev"/>
                         <outlet property="statusTable" destination="EXm-bW-tCq" id="uhU-bw-dyU"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="30" y="275"/>
+            <point key="canvasLocation" x="-340" y="118"/>
+        </scene>
+        <!--MBDetailInterfaceController-->
+        <scene sceneID="YY1-Ao-bjT">
+            <objects>
+                <controller identifier="MBDetailInterfaceController" id="NgC-7g-7v3" customClass="MBDetailInterfaceController">
+                    <items>
+                        <label alignment="left" text="Label" numberOfLines="20" id="7Ez-6g-4PX">
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                        </label>
+                        <group width="1" alignment="left" layout="vertical" id="Pcv-db-sNG">
+                            <items>
+                                <label alignment="left" id="tog-xB-YYA">
+                                    <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                </label>
+                                <label alignment="left" numberOfLines="30" id="6nE-xd-Iwa">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                                <imageView alignment="center" id="Wpa-6N-uAi"/>
+                                <imageView alignment="center" id="doD-KO-GeT"/>
+                                <imageView alignment="center" id="5ka-zM-A1i"/>
+                                <imageView alignment="center" id="aW6-u2-OaU"/>
+                                <imageView alignment="center" id="h0D-Kf-xKe"/>
+                                <imageView alignment="center" id="Hco-JV-q9d"/>
+                                <imageView alignment="center" id="yNx-Sg-iNm"/>
+                                <imageView alignment="center" id="bhF-T9-v8F"/>
+                                <imageView alignment="center" id="c3S-dL-yTB"/>
+                                <group width="1" alignment="left" id="u8w-dD-EB0">
+                                    <items>
+                                        <button width="1" alignment="left" title="Share" id="f49-x6-4Ce">
+                                            <connections>
+                                                <action selector="Share" destination="NgC-7g-7v3" id="0TD-eZ-iqF"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="content" destination="7Ez-6g-4PX" id="6Sj-wT-0mU"/>
+                        <outlet property="eighthImage" destination="bhF-T9-v8F" id="no3-ul-ZBQ"/>
+                        <outlet property="fifthImage" destination="h0D-Kf-xKe" id="r7K-Rg-UQ2"/>
+                        <outlet property="firstImage" destination="Wpa-6N-uAi" id="D3G-Cu-GCg"/>
+                        <outlet property="fourthImage" destination="aW6-u2-OaU" id="ulQ-GH-y22"/>
+                        <outlet property="ninthImage" destination="c3S-dL-yTB" id="TgZ-eq-DGs"/>
+                        <outlet property="retweeted_name" destination="tog-xB-YYA" id="fNm-ZF-v3Z"/>
+                        <outlet property="retweeted_text" destination="6nE-xd-Iwa" id="10f-1X-nyl"/>
+                        <outlet property="secondImage" destination="doD-KO-GeT" id="hvg-Lb-yjy"/>
+                        <outlet property="seventhImage" destination="yNx-Sg-iNm" id="zwY-z5-rkx"/>
+                        <outlet property="shareBtn" destination="f49-x6-4Ce" id="VQ2-si-4ZQ"/>
+                        <outlet property="sixthImage" destination="Hco-JV-q9d" id="JIm-1P-FoZ"/>
+                        <outlet property="thirdImage" destination="5ka-zM-A1i" id="ZnR-bK-MK9"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-166" y="190.75"/>
+        </scene>
+        <!--Image Detail Controller-->
+        <scene sceneID="yly-ue-7Vr">
+            <objects>
+                <controller id="eXN-pK-RjF" customClass="MBImageDetailController">
+                    <items>
+                        <imageView alignment="left" id="JcK-2Y-IzI"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="95" y="118"/>
+        </scene>
+        <!--LoginController-->
+        <scene sceneID="JQa-cW-VC8">
+            <objects>
+                <controller identifier="LoginController" id="is0-Mu-WuM" customClass="MBLoginController">
+                    <items>
+                        <label alignment="left" text="Please Login using iPhone" textAlignment="center" baselineAdjustment="alignCenters" numberOfLines="3" id="C1a-QX-D3T"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="282" y="118"/>
         </scene>
     </scenes>
 </document>

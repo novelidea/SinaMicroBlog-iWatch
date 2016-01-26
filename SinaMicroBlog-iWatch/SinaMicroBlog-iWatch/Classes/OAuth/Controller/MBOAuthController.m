@@ -13,6 +13,11 @@
 #import "MBAccountTool.h"
 #import "MBMainViewController.h"
 #import <WatchConnectivity/WatchConnectivity.h>
+#import "MBRootTool.h"
+#import "MBAccountTransferController.h"
+
+//#import "MBInfoTranslateController.h"
+
 
 #define XPFBaseUrl @"https://api.weibo.com/oauth2/authorize"
 #define XPFClient_id @"1196253863"
@@ -24,20 +29,35 @@
 @interface MBOAuthController () <UIWebViewDelegate, WCSessionDelegate>
 
 @property (nonatomic, strong) WCSession* session;
+@property (nonatomic, retain) UIWebView* web;
 
 @end
 
 
 @implementation MBOAuthController
 
+- (UIWebView *)web{
+    if (nil == _web) {
+        _web = [[UIWebView alloc] initWithFrame:self.view.frame];
+    }
+    return _web;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Do any additional setup after loading the view.
-    UIWebView *web = [[UIWebView alloc] initWithFrame:self.view.frame];
-    [self.view addSubview:web];
+//    UIWebView *web = [[UIWebView alloc] initWithFrame:self.view.frame];
     
+    [self.view addSubview:self.web];
+    
+    if(self.web == nil){
+        NSLog(@"NIL ");
+    }
+    
+    NSLog(@"LOG OUT SUCCESS 2");
+    
+
     
     //weibo
     NSString *baseUrl = @"https://api.weibo.com/oauth2/authorize";
@@ -54,8 +74,8 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     
-    [web loadRequest:request];
-    web.delegate = self;
+    [_web loadRequest:request];
+    _web.delegate = self;
     
     _session = [WCSession defaultSession];
     _session.delegate = self;
@@ -63,16 +83,31 @@
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView{
+    NSLog(@"started");
     [MBProgressHUD showMessage:@"正在加载"];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
+    NSLog(@"HUD finished");
     [MBProgressHUD hideHUD];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+    NSLog(@"HUD failed");
     [MBProgressHUD hideHUD];
+//    [_web setDelegate:nil];
+//    [_web stopLoading];
 }
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [_web setDelegate:nil];
+    [_web stopLoading];
+}
+
+//- (void)dealloc{
+//    [_web setDelegate:nil];
+//    [_web stopLoading];
+//}
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     NSString *urlStr = request.URL.absoluteString;
@@ -112,16 +147,22 @@
     parameter[@"redirect_uri"]=XPFRedirect_url;
     
     [manager POST:@"https://api.weibo.com/oauth2/access_token" parameters:parameter success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"iphone data is: \n%@",responseObject);
         
         MBAccount *account = [MBAccount accountWithDict:responseObject];
+        
+//        NSLog(@"account data is:\n%@\n%@\n%@\n%@\n%@\n", account.access_token, account.expires_in, account.remind_in, account.uid, account.expires_in);
 
         [MBAccountTool saveAccount:account];
+//        MBAccount *accountTest = [MBAccountTool account];
         
-        MBMainViewController *mainVC = [[MBMainViewController alloc] init];
-        MBKeyWindow.rootViewController = mainVC;
+//        NSLog(@"file data is:\n%@\n%@\n%@\n%@\n%@\n", accountTest.access_token, accountTest.expires_in, accountTest.remind_in, accountTest.uid, accountTest.expires_date);
+
+        
+        [MBRootTool chooseRootViewController:MBKeyWindow];
         
         [self sendInfo:responseObject];
+//        MBInfoTranslateController *translateVC = [[MBInfoTranslateController alloc] init];
+//        [translateVC sendInfo:responseObject];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@",error);
@@ -130,10 +171,22 @@
 
 - (void)sendInfo:(NSDictionary *)dic{
     [self.session sendMessage:dic replyHandler:^(NSDictionary<NSString *,id> * _Nonnull replyMessage) {
-        
+//        MBAccount *account = [MBAccount accountWithDict:dic];
+//        [MBAccountTool saveAccount:account];
     } errorHandler:^(NSError * _Nonnull error) {
         
     }];
 }
+
+
+//- (void)session:(WCSession *)session didReceiveMessage:(NSDictionary<NSString *,id> *)message replyHandler:(void (^)(NSDictionary<NSString *,id> * _Nonnull))replyHandler{
+//    NSLog(@"receive");
+//    if ([MBAccountTool account]) {
+//        MBAccount *account = [MBAccountTool account];
+//        [self sendInfo:[MBAccount dicWithAccount:account]];
+//    }
+//    
+//}
+
 
 @end
