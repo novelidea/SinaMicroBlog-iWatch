@@ -16,9 +16,6 @@
 #import "MBRootTool.h"
 #import "MBAccountTransferController.h"
 
-//#import "MBInfoTranslateController.h"
-
-
 #define XPFBaseUrl @"https://api.weibo.com/oauth2/authorize"
 #define XPFClient_id @"1196253863"
 #define XPFRedirect_url @"http://www.pengfeixing.com"
@@ -124,18 +121,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-/**
- 请求参数
- 必选	类型及范围	说明
- client_id	true	string	申请应用时分配的AppKey。
- client_secret	true	string	申请应用时分配的AppSecret。
- grant_type	true	string	请求的类型，填写authorization_code
- 
- grant_type为authorization_code时
- 必选	类型及范围	说明
- code	true	string	调用authorize获得的code值。
- redirect_uri	true	string	回调地址，需需与注册应用里的回调地址一致。
- **/
+
 - (void)accessTokenWithCode:(NSString *)code{
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     

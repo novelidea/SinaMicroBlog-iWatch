@@ -31,9 +31,6 @@ static NSString * const reuseIdentifier = @"Cell";
     
     [self.collectionView registerClass:[MBNewFeatureCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
-    //self.view.backgroundColor = [UIColor redColor];
-    
-    
     self.collectionView.pagingEnabled = YES;
     self.collectionView.bounces = NO;
     self.collectionView.showsHorizontalScrollIndicator = NO;

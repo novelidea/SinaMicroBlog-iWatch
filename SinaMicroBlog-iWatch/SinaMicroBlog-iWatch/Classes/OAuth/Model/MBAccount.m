@@ -21,8 +21,6 @@
     _expires_date = [NSDate dateWithTimeIntervalSinceNow:[expires_in longLongValue]];
 }
 
-//KVC底层实现
-
 + (instancetype)accountWithDict:(NSDictionary *)dic{
     MBAccount *account = [[self alloc] init];
     [account setValuesForKeysWithDictionary:dic];

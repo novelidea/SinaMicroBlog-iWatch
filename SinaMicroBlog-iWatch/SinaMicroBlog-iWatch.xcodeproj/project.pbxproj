@@ -14,8 +14,6 @@
 		DA372D491C3D883D00494B96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA372D471C3D883D00494B96 /* Main.storyboard */; };
 		DA372D4B1C3D883D00494B96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA372D4A1C3D883D00494B96 /* Assets.xcassets */; };
 		DA372D4E1C3D883D00494B96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA372D4C1C3D883D00494B96 /* LaunchScreen.storyboard */; };
-		DA372D591C3D883D00494B96 /* SinaMicroBlog_iWatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372D581C3D883D00494B96 /* SinaMicroBlog_iWatchTests.m */; };
-		DA372D641C3D883D00494B96 /* SinaMicroBlog_iWatchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA372D631C3D883D00494B96 /* SinaMicroBlog_iWatchUITests.m */; };
 		DA372D691C3D883D00494B96 /* SinaMicroBlog-iWatch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = DA372D681C3D883D00494B96 /* SinaMicroBlog-iWatch WatchKit App.app */; };
 		DA372D6F1C3D883D00494B96 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA372D6D1C3D883D00494B96 /* Interface.storyboard */; };
 		DA372D711C3D883D00494B96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA372D701C3D883D00494B96 /* Assets.xcassets */; };
@@ -135,11 +133,7 @@
 		DA372D4D1C3D883D00494B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA372D4F1C3D883D00494B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA372D541C3D883D00494B96 /* SinaMicroBlog-iWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SinaMicroBlog-iWatchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA372D581C3D883D00494B96 /* SinaMicroBlog_iWatchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SinaMicroBlog_iWatchTests.m; sourceTree = "<group>"; };
-		DA372D5A1C3D883D00494B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA372D5F1C3D883D00494B96 /* SinaMicroBlog-iWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SinaMicroBlog-iWatchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA372D631C3D883D00494B96 /* SinaMicroBlog_iWatchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SinaMicroBlog_iWatchUITests.m; sourceTree = "<group>"; };
-		DA372D651C3D883D00494B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA372D681C3D883D00494B96 /* SinaMicroBlog-iWatch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SinaMicroBlog-iWatch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA372D6E1C3D883D00494B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		DA372D701C3D883D00494B96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -276,8 +270,6 @@
 			isa = PBXGroup;
 			children = (
 				DA372D3D1C3D883D00494B96 /* SinaMicroBlog-iWatch */,
-				DA372D571C3D883D00494B96 /* SinaMicroBlog-iWatchTests */,
-				DA372D621C3D883D00494B96 /* SinaMicroBlog-iWatchUITests */,
 				DA372D6C1C3D883D00494B96 /* SinaMicroBlog-iWatch WatchKit App */,
 				DA372D7B1C3D883E00494B96 /* SinaMicroBlog-iWatch WatchKit Extension */,
 				DA372D3C1C3D883D00494B96 /* Products */,
@@ -314,24 +306,6 @@
 				DA372D4F1C3D883D00494B96 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		DA372D571C3D883D00494B96 /* SinaMicroBlog-iWatchTests */ = {
-			isa = PBXGroup;
-			children = (
-				DA372D581C3D883D00494B96 /* SinaMicroBlog_iWatchTests.m */,
-				DA372D5A1C3D883D00494B96 /* Info.plist */,
-			);
-			path = "SinaMicroBlog-iWatchTests";
-			sourceTree = "<group>";
-		};
-		DA372D621C3D883D00494B96 /* SinaMicroBlog-iWatchUITests */ = {
-			isa = PBXGroup;
-			children = (
-				DA372D631C3D883D00494B96 /* SinaMicroBlog_iWatchUITests.m */,
-				DA372D651C3D883D00494B96 /* Info.plist */,
-			);
-			path = "SinaMicroBlog-iWatchUITests";
 			sourceTree = "<group>";
 		};
 		DA372D6C1C3D883D00494B96 /* SinaMicroBlog-iWatch WatchKit App */ = {
@@ -656,7 +630,6 @@
 		DA372E0A1C3DA01900494B96 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				DAE695661C48B57400F8762C /* Category */,
 				DA372E311C3DAE7800494B96 /* Lib */,
 				DA372E0B1C3DA01900494B96 /* ExtensionDelegate.h */,
 				DA372E0C1C3DA01900494B96 /* ExtensionDelegate.m */,
@@ -676,6 +649,7 @@
 		DA372E311C3DAE7800494B96 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				DAE695661C48B57400F8762C /* Category */,
 				DA372E581C3DD5C900494B96 /* MJExtension */,
 			);
 			path = Lib;
@@ -725,7 +699,8 @@
 			children = (
 				DAE695671C48B57400F8762C /* Date */,
 			);
-			path = Category;
+			name = Category;
+			path = ../Category;
 			sourceTree = "<group>";
 		};
 		DAE695671C48B57400F8762C /* Date */ = {
@@ -963,7 +938,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA372D591C3D883D00494B96 /* SinaMicroBlog_iWatchTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -971,7 +945,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA372D641C3D883D00494B96 /* SinaMicroBlog_iWatchUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
