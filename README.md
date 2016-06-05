@@ -9,9 +9,9 @@ Demo presentation: [YouTube](https://youtu.be/HjWLoYmpzhg)(Chinese).
  ![image](./img/new_feature_1.png)
 
 ## Motivation
-Sina Microblog is one of the most popular social network in China. However, there is still no good app available for App Watch. Thus, I design and implement the first App for Apple Watch which has the following outstanding features:
+Sina Microblog is one of the most popular social network in China. However, there is still no good app available for App Watch. Thus, I design and implement the first App for Apple Watch which has the following new features:
 
-1. It's an app for Apple Watch that allows users to access Sina microblog via     Apple Watch; 
+1. It's an app designed for Apple Watch that allows users to access Sina microblog via Apple Watch; 
 2. It's the **FIRST** Apple Watch app that can refresh and load more blogs;         
 3. It's the **FIRST** Apple Watch app that can display shared blogs;
 4. It allows users to read more detailed information about a blog;
