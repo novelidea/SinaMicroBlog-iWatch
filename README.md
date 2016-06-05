@@ -12,9 +12,24 @@ Sina Microblog is one of the most popular social network in China. However, ther
 
 ## New feature Display
 
+### Home
+ ![image](./img/home.jpg)
+ 
+### Refresh
+![image](./img/refresh.jpg)
 
+### Load More
+![image](./img/load_more.jpg)
+
+### Details
+![image](./img/details.jpg)
+
+### Share & Like
+![image](./img/share_like.jpg)
 
 ## Brief Technical Introduction
-
+This app is developed based on [network interface](http://open.weibo.com) provided by Sina. Since there's no keyboard in Apple Watch, users can just log in by their iPhone. Then, iPhone and Apple Watch build a network connection by [WatchConnectivity](https://developer.apple.com/library/watchos/documentation/WatchConnectivity/Reference/WatchConnectivity_framework/) and data can be transferred between the two devices. 
 
 ## To Readers
+
+There are still many places can be improved. For example, log out function can be added. Also, sometimes app may crash because of the usage of multi-thread technique in downloading pictures(since there's no library for Apple Watch to download pictures Asynchronously). Therefore, I welcome every reader to fork this project and help me to make this project be a great product!
