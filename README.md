@@ -4,6 +4,10 @@ This is a [Sina Microblog](https://en.wikipedia.org/wiki/Sina_Weibo) App for App
 
 Demo presentation: [YouTube](https://youtu.be/HjWLoYmpzhg).
 
+ ![image](./img/new_feature_0.png)
+ 
+ ![image](./img/new_feature_1.png)
+
 ## Motivation
 Sina Microblog is one of the most popular social network in China. However, there is still no good app available for App Watch. Thus, I design and implement the first App for Apple Watch which has the following outstanding features:
 
@@ -13,22 +17,6 @@ Sina Microblog is one of the most popular social network in China. However, ther
 4. It allows users to read more detailed information about a status;
 5. It allows users to 'like' or 'share' status. 
 
-## New feature Display
-
-### Home
- ![image](./img/home.jpg)
- 
-### Refresh
-![image](./img/refresh.jpg)
-
-### Load More
-![image](./img/load_more.jpg)
-
-### Details
-![image](./img/details.jpg)
-
-### Share & Like
-![image](./img/share_like.jpg)
 
 ## Brief Technical Introduction
 This app is developed based on [network interface](http://open.weibo.com) provided by Sina. Since there's no keyboard in Apple Watch, users can just log in by their iPhone. Then, iPhone and Apple Watch build a network connection by [WatchConnectivity](https://developer.apple.com/library/watchos/documentation/WatchConnectivity/Reference/WatchConnectivity_framework/) and data can be transferred between the two devices. 
