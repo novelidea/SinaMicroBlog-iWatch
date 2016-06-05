@@ -1,6 +1,6 @@
 # SinaMicroBlog-iWatch
 
-This is a [Sina Microblog](https://en.wikipedia.org/wiki/Sina_Weibo) App for Apple Watch and is motivated by [CoderMJLee](https://github.com/CoderMJLee)'s IOS course project.
+This is a [Sina Microblog](https://en.wikipedia.org/wiki/Sina_Weibo) App for Apple Watch and is motivated by [CoderMJLee](https://github.com/CoderMJLee)'s OAuth introduction.
 
 Demo presentation: [YouTube](https://youtu.be/HjWLoYmpzhg).
 
