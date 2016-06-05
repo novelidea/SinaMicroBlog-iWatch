@@ -2,6 +2,8 @@
 
 This is a [Sina Microblog](https://en.wikipedia.org/wiki/Sina_Weibo) App for Apple Watch and is motivated by [CoderMJLee](https://github.com/CoderMJLee)'s IOS course project.
 
+Demo presentation: [YouTube](https://youtu.be/HjWLoYmpzhg).
+
 ## Motivation
 Sina Microblog is one of the most popular social network in China. However, there is still no good app available for App Watch. Thus, I design and implement the first App for Apple Watch which has the following outstanding features:
 
